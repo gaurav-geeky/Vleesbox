@@ -65,7 +65,7 @@ const Home = () => {
       <article className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3 text-center py-10 font-[Georgia,serif] px-4">
 
         <div className="flex flex-col items-center gap-3">
-          <FaTruck className="text-5xl text-gray-700" />
+          <FaTruck className="text-6xl text-gray-700" />
           <p className="text-gray-800 text-lg leading-relaxed">
             Ordered today and delivered <br />
             the day after tomorrow! <br />
@@ -74,7 +74,7 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <MdEuroSymbol className="text-5xl text-gray-700" />
+          <MdEuroSymbol className="text-6xl text-gray-700" />
           <p className="text-gray-800 text-lg">
             Free shipping <br />
             from 100 euro
@@ -82,7 +82,7 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <div className="text-4xl text-gray-700">★★★★★</div>
+          <div className="text-3xl text-gray-700">★★★★★</div>
           <p className="text-gray-800 text-lg">
             100% fresh meat <br />
             restaurant quality <br />
@@ -234,8 +234,5 @@ const Home = () => {
 
 export default Home;
 
-/*
 
-ok now working but as i told you when i click next see 3 new data but on clck of next or previous it only adds the next data to previous slide i means  1st --  1 , 2, 3, . when i click next  2 , 3, 4,  next--> 3, 4, 5 like this but i need if i click next show other 3 slide --- > 1 , 2, 3,  ---> 4, 5, 6, --> like this 
 
-*/

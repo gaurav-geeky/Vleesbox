@@ -16,7 +16,7 @@ const HomeSlider = () => {
 
     const Card = ({ img, title, description }) => {
         return (
-            <div className="bg-white shadow-md overflow-hidden">
+            <div className="bg-white shadow-md overflow-hidden border ">
                 <img src={img} className="w-full h-[180px] hover:scale-110 object-cover transition duration-300 " />
 
                 <div className="p-4">
@@ -38,7 +38,7 @@ const HomeSlider = () => {
 
     return (
         <>
-            <div className="max-w-7xl mx-auto py-10 relative">
+            <div className="max-w-7xl mx-auto py-10 relative group">
 
                 <Swiper
                     modules={[Pagination, Navigation]}
@@ -59,6 +59,7 @@ const HomeSlider = () => {
                         1024: { slidesPerView: 3, slidesPerGroup: 3 },
                     }}
                 >
+                    
 
                     {Homeslide.map((slide) => (
                         <SwiperSlide key={slide.id}>
@@ -74,16 +75,16 @@ const HomeSlider = () => {
 
 
                 {/* LEFT ARROW */}
-                <div className="custom-prev absolute left-[-18px] top-1/2 -translate-y-1/2 z-10 cursor-pointer hidden md:flex">
-                    <div className="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition">
-                        
+                <div className="custom-prev absolute left-[-18px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
+                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
+                        &lt;
                     </div>
                 </div>
 
                 {/* RIGHT ARROW */}
-                <div className="custom-next absolute right-[-18px] top-1/2 -translate-y-1/2 z-10 cursor-pointer hidden md:flex">
-                    <div className="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition">
-                        
+                <div className="custom-next absolute right-[-18px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
+                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
+                        &gt;
                     </div>
                 </div>
 
