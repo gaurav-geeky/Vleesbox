@@ -3,6 +3,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header'
 import Home from './Pages/Home'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <>
       <div>
         <Header />
-        <Home />
+        <Home /> 
+        < Footer/>
 
       </div>
     </>

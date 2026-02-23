@@ -2,9 +2,6 @@ import React from 'react'
 import { FaTruck } from "react-icons/fa";
 import { MdEuroSymbol } from "react-icons/md";
 
-
-
-
 const Homecode = () => {
 
 
