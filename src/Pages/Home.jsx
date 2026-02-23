@@ -2,6 +2,8 @@
 import React from "react";
 import { FaTruck } from "react-icons/fa";
 import { MdEuroSymbol } from "react-icons/md";
+import HomeSlider from "../Components/HomeSlider";
+
 
 const Home = () => {
 
@@ -171,7 +173,7 @@ const Home = () => {
       </article>
 
       {/* ================= SMALL PRODUCT GRID ================= */}
-      <div className="max-w-6xl mx-auto mt-10 px-4">
+      <div className="max-w-7xl mx-auto mt-10 p-4 ">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
 
           <Banner
@@ -203,9 +205,28 @@ const Home = () => {
           />
 
         </div>
+
+        <div className=" flex items-center p-2">
+          <button className="text-white bg-[#86133A] font-[Merriweather] text-[14px] font-bold py-[10px] px-[15px] m-auto ">
+            To our Shop - Order meat online
+          </button>
+        </div>
+
       </div>
 
       {/* spacer */}
+
+      <section className=" py-5 ">
+        <div className="max-w-[85%] mx-auto ">
+          <h3 className=" p-[15px] font-[Dancing_Script] bg-[#86133A] text-[30px] text-white text-center">A different view of meat</h3>
+        </div>
+
+        <article className="max-w-[85%] mx-auto  ">
+          <HomeSlider />
+
+        </article>
+
+      </section>
 
     </section>
   );
@@ -213,3 +234,8 @@ const Home = () => {
 
 export default Home;
 
+/*
+
+ok now working but as i told you when i click next see 3 new data but on clck of next or previous it only adds the next data to previous slide i means  1st --  1 , 2, 3, . when i click next  2 , 3, 4,  next--> 3, 4, 5 like this but i need if i click next show other 3 slide --- > 1 , 2, 3,  ---> 4, 5, 6, --> like this 
+
+*/
