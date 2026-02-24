@@ -200,7 +200,7 @@ const Header = () => {
 
             {/* Navigation options 3rd */}
             <nav className=" py-1 bg-white font-[Merriweather]" >
-                <div className='flex items-center justify-between text-[22px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
+                <div className='flex items-center justify-between text-[22px] w-5xl m-auto mt-1 mb-1 text-gray-800 '>
 
                     <Link to="/home">Home</Link>
                     <Link to="/shop" className="text-rose-500">Shop</Link>

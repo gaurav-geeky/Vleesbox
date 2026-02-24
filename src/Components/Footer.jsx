@@ -28,7 +28,7 @@ const Footer = () => {
         <>
 
             {/*  1st footer section */}
-            <section className='bg-[#cf7a93] '>
+            <section className='bg-[#e186a1] '>
                 <h1 className='font-[Dancing_Script] uppercase font-bold text-3xl text-center text-white py-5'>CUSTOMERS HAVE THEIR SAY</h1>
                 <div className=" p-3 flex justify-center items-center  ">
 
@@ -37,11 +37,11 @@ const Footer = () => {
                         {/* Title */}
                         <h2 className="text-2xl font-semibold mb-4">Uitstekend</h2>
                         {/* Stars */}
-                        <div className="flex justify-center gap-2 mb-3">
+                        <div className="flex justify-center gap-2 mb-3 group">
                             {[...Array(5)].map((_, i) => (
                                 <div
                                     key={i}
-                                    className="bg-green-600 w-8 h-8 flex items-center justify-center"
+                                    className="bg-[#00B67A] group-hover:bg-[#138861] w-8 h-8 flex items-center justify-center"
                                 >
                                     <IoStarSharp className="text-white text-xl" />
                                 </div>
@@ -81,11 +81,11 @@ const Footer = () => {
                                         key={offset}
                                         className="rounded-lg p-6  w-[220px] shrink-0"
                                     >
-                                        <div className="flex gap-1 text-green-600 mb-2">
+                                        <div className="flex gap-1 text-green-600 mb-2 group">
                                             {[...Array(5)].map((_, i) => (
                                                 <div
                                                     key={i}
-                                                    className="bg-green-600 w-4 h-4 flex items-center justify-center"
+                                                    className="bg-[#00B67A] group-hover:bg-[#138861] w-4 h-4 flex items-center justify-center"
                                                 >
                                                     <IoStarSharp className="text-white " />
                                                 </div>
