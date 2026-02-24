@@ -3,13 +3,15 @@ import React from "react";
 import { FaTruck } from "react-icons/fa";
 import { MdEuroSymbol } from "react-icons/md";
 import HomeSlider from "../Components/HomeSlider";
+import { IoMdPlay } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+import { useState } from "react";
 
 
 const Home = () => {
 
-  /* =========================
-     REUSABLE BANNER COMPONENT
-  ========================== */
+  const [play, setplay] = useState(false);
+
   const Banner = ({
     title,
     img,
@@ -216,7 +218,7 @@ const Home = () => {
 
       {/* spacer */}
 
-      <section className=" py-5 ">
+      <section className=" py-5  ">
         <div className="max-w-[85%] mx-auto ">
           <h3 className=" p-[15px] font-[Dancing_Script] bg-[#86133A] text-[30px] text-white text-center">A different view of meat</h3>
         </div>
@@ -228,7 +230,62 @@ const Home = () => {
 
       </section>
 
-    </section>
+      <section className=" py-5 ">
+
+        <div className="max-w-[85%] mx-auto relative ">
+
+          {!play ?
+            (<>
+              <img src="https://www.vlees-in-the-box.be/image/cache/catalog/banner/vlees-video-1280x400w.jpg.webp" alt="vlees" />
+
+              <div
+                onClick={() => { setplay(true); }}
+                className="absolute top-1/2 left-1/2
+              -translate-x-1/2 -translate-y-1/2
+              flex items-center justify-center
+              h-[55px] w-[55px]
+              rounded-full
+              border border-[#3d3d3d]
+              bg-white
+              hover:bg-gray-100
+                    cursor-pointer">
+                <IoMdPlay size={20} />
+              </div>
+            </>) :
+
+            (
+              <>
+                <iframe
+                  className="w-full h-[400px] md:h-[420px] object-cover"
+                  src="https://www.youtube.com/embed/SimeOQ_w2xE?si=SSZNvt1glV6_WwzN"
+                  title="YouTube video"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
+
+                {/* CLOSE BUTTON */}
+                <button
+                  onClick={() => setplay(false)}
+                  className="absolute top-3 right-3
+              text-black/70 bg-white rounded-full p-1"
+                >
+                  <IoClose size={21} />
+                </button>
+              </>
+            )
+          }
+
+        </div>
+
+
+
+
+      </section>
+
+
+
+
+    </section >
   );
 };
 

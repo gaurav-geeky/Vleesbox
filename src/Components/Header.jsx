@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react';
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { PiShoppingCart } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -23,31 +24,35 @@ const Header = () => {
     const [category, setCategory] = useState("ALL");
     const catRef = useRef(null);
 
+    const [showSticky, setShowSticky] = useState(false); // slide nav bar
+
     useEffect(() => {
         function handleClickOutside(e) {
-
             // close language dropdown
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(e.target)
-            ) {
+            if (dropdownRef.current &&
+                !dropdownRef.current.contains(e.target)) {
                 setOpen(false);
             }
 
             // close category dropdown
-            if (
-                catRef.current &&
-                !catRef.current.contains(e.target)
-            ) {
+            if (catRef.current &&
+                !catRef.current.contains(e.target)) {
                 setCatOpen(false);
             }
-
         }
 
+        const handleScroll = () => {
+            if (window.scrollY > 250) { setShowSticky(true); }
+            else { setShowSticky(false); }
+        };
+
+        window.addEventListener("scroll", handleScroll);
         document.addEventListener("mousedown", handleClickOutside);
 
-        return () =>
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
             document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
 
@@ -122,7 +127,7 @@ const Header = () => {
                     <div className=' flex justify-around items-start'>
                         {/*  1st */}
                         <div>
-                            <img className='border h-[77px]' src="https://www.vlees-in-the-box.be/image/cache/catalog/logo/logo%20VIB-1031x160.png.webp" alt="logo" />
+                            <img className=' h-[77px]' src="https://www.vlees-in-the-box.be/image/cache/catalog/logo/logo%20VIB-1031x160.png.webp" alt="logo" />
                         </div>
 
                         {/* 2nd  */}
@@ -180,7 +185,7 @@ const Header = () => {
 
 
                         {/* 3rd */}
-                        <div className='flex items-center gap-6  border px-1'>
+                        <div className='flex items-center gap-6   px-1'>
                             <div className='text-[35px] '> <PiShoppingCart /> </div>
                             <span className='text-[#86133a] text-[18px] font-semibold hover:text-[#e74a7e]' >SIGN IN</span>
                             <span className='text-rose-500 text-[18px] font-semibold hover:text-[#f9b4ca]  '>REGISTER</span>
@@ -194,22 +199,43 @@ const Header = () => {
             </article>
 
             {/* Navigation options 3rd */}
-            <nav className="sticky top-0 z-50 py-2 bg-white font-[Merriweather]" >
-                <div className='flex items-center justify-between text-[22px] border w-5xl m-auto mt-1 mb-1 text-gray-800 '>
-                    <a href="">Home </a>
-                    <a href="" className='text-rose-500'>Shop</a>
-                    <a href="">How to order?</a>
-                    <a href="">Our quality meat</a>
-                    <a href="">Mission & Vision</a>
-                    <a href="">News</a>
-                    <a href="">Help</a>
-                    <a href="">Contact</a>
+            <nav className=" py-1 bg-white font-[Merriweather]" >
+                <div className='flex items-center justify-between text-[22px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
+
+                    <Link to="/home">Home</Link>
+                    <Link to="/shop" className="text-rose-500">Shop</Link>
+                    <Link to="/how-to-order">How to order?</Link>
+                    <Link to="/quality">Our quality meat</Link>
+                    <Link to="/mission">Mission & Vision</Link>
+                    <Link to="/news">News</Link>
+                    <Link to="/help">Help</Link>
+                    <Link to="/contact">Contact</Link>
+                    
                 </div>
             </nav>
 
+            {/* SLIDE DOWN NAVBAR */}
+            <nav
+                className={`fixed top-0 left-0 w-full z-50 bg-white shadow-md font-[Merriweather]   
+                transition-transform duration-200 ease-out
+                ${showSticky ? "translate-y-0" : "-translate-y-full"}
+                `}
+            >
+                <div className='flex items-center justify-between text-[22px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
+
+                    <Link to="/home">Home</Link>
+                    <Link to="/shop" className="text-rose-500">Shop</Link>
+                    <Link to="/how-to-order">How to order?</Link>
+                    <Link to="/quality">Our quality meat</Link>
+                    <Link to="/mission">Mission & Vision</Link>
+                    <Link to="/news">News</Link>
+                    <Link to="/help">Help</Link>
+                    <Link to="/contact">Contact</Link>
+
+                </div>
+            </nav>
         </>
     )
 }
 
-export default Header;   
- 
+export default Header;
