@@ -33,11 +33,11 @@ const Footer = () => {
                 <div className=" p-3 flex justify-center items-center  ">
 
                     {/* 1st footer */}
-                    <div className=" rounded-lg p-6 text-center ">
+                    <div className=" rounded-lg p-6 text-center group ">
                         {/* Title */}
                         <h2 className="text-2xl font-semibold mb-4">Uitstekend</h2>
                         {/* Stars */}
-                        <div className="flex justify-center gap-2 mb-3 group">
+                        <div className="flex justify-center gap-2 mb-3 ">
                             {[...Array(5)].map((_, i) => (
                                 <div
                                     key={i}
