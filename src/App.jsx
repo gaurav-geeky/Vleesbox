@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Layout from './Pages/Layout'
 import Shop from './Pages/Shop'
+import HowtoOrder from './Pages/HowtoOrder'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='shop' element={<Shop />} />
+            <Route path='how-to-order' element={<HowtoOrder />} />
 
           </Route>
         </Routes>

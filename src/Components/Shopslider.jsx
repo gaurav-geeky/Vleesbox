@@ -1,7 +1,5 @@
-//  wrong code not running.
 
-
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -11,48 +9,62 @@ import "swiper/css/navigation";
 
 import Shopreview from "./Shopreview";
 
-const Shopslider = () => {
-  const ReviewSlide = ({ title, desc, name }) => {
-    return (
-      <div className="text-center max-w-[650px] mx-auto px-4">
-        <h3 className="text-[18px] font-semibold text-gray-800">
-          {title}
-          <span className="text-gray-500 text-sm ml-2">✔ Geverifieerd</span>
-        </h3>
+import { RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftSLine } from "react-icons/ri";
 
-        <p className="text-gray-600 mt-2">{desc}</p>
 
-        <p className="text-gray-500 mt-3 text-sm">
-          <span className="font-semibold">{name}</span>, 13 januari
-        </p>
-      </div>
-    );
-  };
+
+const ReviewSlider = () => {
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.params.navigation.prevEl = prevRef.current;
+      swiperRef.current.params.navigation.nextEl = nextRef.current;
+
+      swiperRef.current.navigation.destroy();
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, []);
+
+  const Card = ({ title, desc, name }) => (
+    <div className=" mx-auto text-left px-2">
+      <h3 className="text-[18px]  font-bold text-gray-800">
+        {title}
+      </h3>
+
+      <p className="text-[13px] text-gray-700 font-semibold mt-2">{desc}</p>
+
+      <p className="text-[13px] text-gray-500 mt-1 text-sm">
+        <span className="font-semibold">{name}</span>
+      </p>
+    </div>
+  );
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full py-6  ">
 
-      {/* SWIPER */}
       <Swiper
         modules={[Pagination, Navigation]}
         slidesPerView={1}
-        centeredSlides
+        loop={false}
+
+        speed={600}
+        resistanceRatio={0.85}
+        touchRatio={1}
         spaceBetween={30}
-        loop
-        autoHeight
-        pagination={{
-          clickable: true,
-          el: ".custom-pagination",
-        }}
-        navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
-        }}
-        className="!pb-10"   // space for dots
+
+        pagination={{ clickable: true }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        className="pb-10"
       >
         {Shopreview.map((slide) => (
-          <SwiperSlide key={slide.id} className="flex justify-center">
-            <ReviewSlide
+          <SwiperSlide key={slide.id}>
+            <Card
               title={slide.title}
               desc={slide.desc}
               name={slide.name}
@@ -61,19 +73,29 @@ const Shopslider = () => {
         ))}
       </Swiper>
 
-      {/* ARROWS */}
-      <div className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 text-gray-400 text-2xl cursor-pointer select-none">
-        ‹
+      {/* LEFT ARROW */}
+      <div
+        ref={prevRef}
+        className="absolute left-4 top-4/5 -translate-y-1/2 cursor-pointer z-10"
+      >
+        <div className="w-7 h-7 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+          <RiArrowLeftSLine className="text-gray-300 hover:text-gray-700" />
+        </div>
       </div>
 
-      <div className="custom-next absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 text-2xl cursor-pointer select-none">
-        ›
+      {/* RIGHT ARROW */}
+      <div
+        ref={nextRef}
+        className="absolute right-4 top-4/5 -translate-y-1/2 cursor-pointer z-10"
+      >
+        <div className="w-7 h-7   border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+          <RiArrowRightSLine className="text-gray-300 hover:text-gray-700" />
+        </div>
       </div>
 
-      {/* PAGINATION DOTS */}
-      <div className="custom-pagination flex justify-center mt-4"></div>
     </div>
   );
 };
 
-export default Shopslider;
+export default ReviewSlider;
+

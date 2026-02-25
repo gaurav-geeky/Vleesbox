@@ -5,17 +5,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
+:root {
+  --swiper-theme-color: #222;   /* active dot color */
+}
+
+/*  home slider */
 .swiper-pagination {
   position: relative !important;
   margin-top: 30px; 
-  /* background-color: #f0cdd9; */
 }
 
+/* inactive dots */
+.swiper-pagination-bullet {
+  background: #cfcfcf;
+  opacity: 1; 
+  width: 8px;
+  height: 8px;
+}
+
+/* active dot */
+.swiper-pagination-bullet-active {
+  background: #222;   /* dark dot */
+}
+
+@import "tailwindcss";  
 
 
-
-
-@import "tailwindcss"; 
 
 
 

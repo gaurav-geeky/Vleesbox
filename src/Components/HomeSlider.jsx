@@ -43,7 +43,12 @@ const HomeSlider = () => {
                 <Swiper
                     className=' pb-12 '
                     modules={[Pagination, Navigation]}
+
+                    speed={600}
+                    resistanceRatio={0.85}
+                    touchRatio={1}
                     spaceBetween={25}
+                    
                     slidesPerView={3}
                     slidesPerGroup={3} // for group slide
                     pagination={{ clickable: true }}
@@ -76,16 +81,20 @@ const HomeSlider = () => {
 
                 {/* LEFT ARROW */}
                 <div className="custom-prev absolute left-[-15px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
+
                     <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
                         &lt;
                     </div>
+
                 </div>
 
                 {/* RIGHT ARROW */}
                 <div className="custom-next absolute right-[-15px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
+
                     <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
                         &gt;
                     </div>
+
                 </div>
 
 

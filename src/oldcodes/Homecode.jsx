@@ -1,3 +1,5 @@
+//  old codes  used codes
+
 import React from 'react'
 import { FaTruck } from "react-icons/fa";
 import { MdEuroSymbol } from "react-icons/md";
@@ -215,3 +217,103 @@ const Homecode = () => {
 
 export default Homecode;
 
+
+//  old codes  used codes
+
+//  old codes  used codes
+
+// shopslider jsx 
+
+
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import Shopreview from "./Shopreview";
+
+const ReviewSlider = () => {
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const Card = ({ title, desc, name }) => (
+    <div className="max-w-[600px] mx-auto text-left">
+      <h3 className="text-[18px] font-semibold text-gray-800">
+        {title}
+      </h3>
+
+      <p className="text-gray-600 mt-2">
+        {desc}
+      </p>
+
+      <p className="text-gray-500 mt-3 text-sm">
+        <span className="font-semibold">{name}</span>
+      </p>
+    </div>
+  );
+
+  return (
+    <div className="relative w-full py-6">
+
+      <Swiper
+        modules={[Pagination, Navigation]}
+        slidesPerView={1}
+        slidesPerGroup={1}
+        loop 
+        spaceBetween={30}
+        pagination={{ clickable: true }}   // ✅ automatic dots
+
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+        }}
+
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+
+        className="pb-10"
+      >
+
+        {Shopreview.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <Card
+              title={slide.title}
+              desc={slide.desc}
+              name={slide.name}
+            />
+          </SwiperSlide>
+        ))}
+
+      </Swiper>
+
+      {/* LEFT ARROW */}
+      <div
+        ref={prevRef}
+        className="absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer"
+      >
+        <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+          ‹
+        </div>
+      </div>
+
+      {/* RIGHT ARROW */}
+      <div
+        ref={nextRef}
+        className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
+      >
+        <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+          ›
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default ReviewSlider;
