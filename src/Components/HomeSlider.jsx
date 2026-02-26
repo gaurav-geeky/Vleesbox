@@ -16,8 +16,11 @@ const HomeSlider = () => {
 
     const Card = ({ img, title, description }) => {
         return (
-            <div className="bg-white shadow-md overflow-hidden ">
-                <img src={img} className="w-full h-[180px] hover:scale-110 object-cover transition duration-300 " />
+            <div className="bg-white shadow-md overflow-hidden "> 
+            
+                <div className='h-[190px] w-full overflow-hidden  '>
+                    <img src={img} className="w-full h-[190px] hover:scale-110 object-cover transition duration-300  " />
+                </div>
 
                 <div className="p-4">
                     <h3 className="text-[#86133a] font-semibold text-lg">

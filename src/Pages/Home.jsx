@@ -216,9 +216,10 @@ const Home = () => {
 
       </div>
 
-      {/* spacer */}
+      {/* Home slider section  */}
 
       <section className=" py-5  ">
+
         <div className="max-w-[85%] mx-auto ">
           <h3 className=" p-[15px] font-[Dancing_Script] bg-[#86133A] text-[30px] text-white text-center">A different view of meat</h3>
         </div>
@@ -278,18 +279,12 @@ const Home = () => {
         </div>
 
 
-
-
       </section>
-
-
-
 
     </section >
   );
 };
 
 export default Home;
-
 
 

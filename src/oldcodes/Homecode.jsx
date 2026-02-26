@@ -237,83 +237,272 @@ import Shopreview from "./Shopreview";
 
 const ReviewSlider = () => {
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
 
-  const Card = ({ title, desc, name }) => (
-    <div className="max-w-[600px] mx-auto text-left">
-      <h3 className="text-[18px] font-semibold text-gray-800">
-        {title}
-      </h3>
+    const Card = ({ title, desc, name }) => (
+        <div className="max-w-[600px] mx-auto text-left">
+            <h3 className="text-[18px] font-semibold text-gray-800">
+                {title}
+            </h3>
 
-      <p className="text-gray-600 mt-2">
-        {desc}
-      </p>
+            <p className="text-gray-600 mt-2">
+                {desc}
+            </p>
 
-      <p className="text-gray-500 mt-3 text-sm">
-        <span className="font-semibold">{name}</span>
-      </p>
-    </div>
-  );
-
-  return (
-    <div className="relative w-full py-6">
-
-      <Swiper
-        modules={[Pagination, Navigation]}
-        slidesPerView={1}
-        slidesPerGroup={1}
-        loop 
-        spaceBetween={30}
-        pagination={{ clickable: true }}   // ✅ automatic dots
-
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-
-        className="pb-10"
-      >
-
-        {Shopreview.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <Card
-              title={slide.title}
-              desc={slide.desc}
-              name={slide.name}
-            />
-          </SwiperSlide>
-        ))}
-
-      </Swiper>
-
-      {/* LEFT ARROW */}
-      <div
-        ref={prevRef}
-        className="absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer"
-      >
-        <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
-          ‹
+            <p className="text-gray-500 mt-3 text-sm">
+                <span className="font-semibold">{name}</span>
+            </p>
         </div>
-      </div>
+    );
 
-      {/* RIGHT ARROW */}
-      <div
-        ref={nextRef}
-        className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
-      >
-        <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
-          ›
+    return (
+        <div className="relative w-full py-6">
+
+            <Swiper
+                modules={[Pagination, Navigation]}
+                slidesPerView={1}
+                slidesPerGroup={1}
+                loop
+                spaceBetween={30}
+                pagination={{ clickable: true }}   // ✅ automatic dots
+
+                onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
+                }}
+
+                navigation={{
+                    prevEl: prevRef.current,
+                    nextEl: nextRef.current,
+                }}
+
+                className="pb-10"
+            >
+
+                {Shopreview.map((slide) => (
+                    <SwiperSlide key={slide.id}>
+                        <Card
+                            title={slide.title}
+                            desc={slide.desc}
+                            name={slide.name}
+                        />
+                    </SwiperSlide>
+                ))}
+
+            </Swiper>
+
+            {/* LEFT ARROW */}
+            <div
+                ref={prevRef}
+                className="absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer"
+            >
+                <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+                    ‹
+                </div>
+            </div>
+
+            {/* RIGHT ARROW */}
+            <div
+                ref={nextRef}
+                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
+            >
+                <div className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-500 transition">
+                    ›
+                </div>
+            </div>
+
         </div>
-      </div>
-
-    </div>
-  );
+    );
 };
 
 export default ReviewSlider;
+
+// order page sliders old code --- 
+
+
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+import orderpageslide from "./Orderpageslide";
+
+
+const Orderslider = () => {
+    return (
+        <div className="relative max-w-[500px] h-[220px]  hover:bg-black/5 mx-auto group ">
+
+            {/* LEFT BUTTON */}
+            <div className="orderslider-btn custom-prev left-[-16px]">
+                ❮
+            </div>
+
+            {/* RIGHT BUTTON */}
+
+            <div className="orderslider-btn custom-next right-[-16px]">
+                ❯
+            </div>
+
+            <Swiper
+                modules={[Navigation, Autoplay]}
+                slidesPerView={1}
+                loop={false}
+                autoplay={{ delay: 4000 }}
+                navigation={{
+                    nextEl: ".custom-next",
+                    prevEl: ".custom-prev",
+                }}
+            >
+                {orderpageslide.map((img, i) => (
+                    <SwiperSlide key={i}>
+                        <img
+                            src={img}
+                            alt="slide"
+                            className="w-full h-auto object-cover "
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+};
+
+export default Orderslider;
+
+
+
+
+
+
+//  blog section 
+
+<section className="flex items-start  gap-5 max-w-[1350px] mx-auto  px-6  ">
+
+    {/* left sidebar */}
+    <section className='flex-1  px-2 font-[Merriweather] border-r border-gray-300 p-4 h-[200vh] bg-amber-100  '>
+
+        <h1 className='text-[30px] text-[#86133a] leading-9 mb-4  '> Blog </h1>
+
+        {/*  map block to show food blogs */}
+        <article>
+            {Homeslide.map((post) => (
+                <div
+                    key={post.id}
+                    className="flex gap-6 py-8 border-b border-gray-300"
+                >
+                    {/* IMAGE */}
+                    <div className="relative w-[400px] h-[250px] shrink-0 overflow-hidden">
+                        <img
+                            src={post.img}
+                            alt={post.title}
+                            className="w-full h-full object-cover"
+                        />
+
+                        {/* DATE BADGE */}
+                        <div className="absolute top-3 left-3 bg-[#86133a] text-white text-xs px-2 py-1 font-bold">
+                            {post.date}
+                        </div>
+                    </div>
+
+                    {/* TEXT CONTENT */}
+                    <div className="max-w-xl">
+                        <h2 className="text-[26px] text-[#86133a] leading-snug">
+                            {post.title}
+                        </h2>
+
+                        <p className="text-gray-600 mt-2 leading-relaxed">
+                            {post.description}
+                        </p>
+
+                        <button className="mt-4 border border-gray-400 px-6 py-2 text-sm hover:bg-gray-100">
+                            READ MORE →
+                        </button>
+                    </div>
+                </div>
+            ))}
+        </article>
+
+
+    </section>
+
+    {/* right sidebar */}
+    <section className="w-[220px]  shrink-0  py-2 bg-green-200  h-[200vh]  ">
+        fsjdfd
+    </section>
+
+
+</section > 
+
+
+//  blog full code 
+import React from 'react'
+import Homeslide from '../Components/Homeslide';
+import { BsArrowRightShort } from "react-icons/bs";
+
+const News = () => {
+    return (
+        <>
+
+            {/* 2nd section */}
+            <section className="flex items-start  gap-5 max-w-[1350px] mx-auto  px-6  ">
+
+                {/* left sidebar */}
+                <section className='flex-1  px-2 font-[Merriweather] border-r border-gray-300 p-4  bg-amber-100  
+                '>
+
+                    <h1 className='text-[30px] text-[#86133a] leading-9 mb-4  '> Blog </h1>
+
+                    <article className='h-auto p-5 '>
+                        {Homeslide.map((post) => (
+
+                            <div className='flex gap-4 border p-2'>
+
+                                <div className="w-[400px] h-[250px] overflow-hidden border ">
+                                    <img
+                                        src={post.img}
+                                        alt={post.title}
+                                        className="w-full h-[250px] object-cover "
+                                    />
+                                </div>
+
+
+                                <div className='w-[620px] h-auto'>
+                                    <div>
+                                        <h1 className='text-[22px] font-[Merriweather] text-[#86133a] border p-2 '> {post.title} </h1>
+                                    </div>
+
+                                    <div>
+                                        <h1 className='text-[16px] font-[Merriweather] text-gray-600 border p-2 '> {post.description} </h1>
+                                    </div>
+
+                                    <div className='inline-flex items-center  px-4 bg-amber-200  border p-2'>
+                                        <button>Read More</button>
+                                        < BsArrowRightShort size={20} />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+
+                    </article>
+
+
+
+                </section>
+
+                {/* right sidebar */}
+                <section className="w-[220px]  shrink-0  py-2 bg-green-200 h-screen  ">
+                    fsjdfd
+                </section>
+
+
+            </section >
+
+        </>
+    )
+}
+
+export default News;
+

@@ -24,14 +24,13 @@ const HowtoOrder = () => {
                 </div>
             </section>
 
-
             {/* 2nd section */}
             <section className="flex items-start  gap-5 max-w-[1350px] mx-auto  px-6   ">
 
                 {/* left sidebar */}
                 <section className='flex-1  px-2 font-[Merriweather] border-r border-gray-300 p-4  '>
 
-                    <h1 className='text-[30px] text-[#86133a] leading-9 mb-4 font-semibold'>How to proceed?</h1>
+                    <h1 className='text-[30px] text-[#86133a] leading-9 mb-4 font-semibold'> How to proceed?</h1>
 
                     {/* Order section */}
                     <article>
@@ -64,7 +63,7 @@ const HowtoOrder = () => {
 
                         <p className='leading-[22px] my-8 text-gray-700 '>  &nbsp; &nbsp; - After payment you will receive an order number and you can track your order in your account.  &nbsp; &nbsp;&nbsp;</p>
 
-                        <p className='leading-[22px] mb-8 text-gray-700 '> If you would like assistance with ordering meat, please contact us on 0032 11 70 50 80 or via bestellingen@vlees-in-the-box.be. </p>
+                        <p className='leading-[22px] my-12 text-gray-700 '> If you would like assistance with ordering meat, please contact us on 0032 11 70 50 80 or via bestellingen@vlees-in-the-box.be. </p>
 
                         {/* Delivery section */}
 
@@ -107,11 +106,6 @@ const HowtoOrder = () => {
 
                         <p className='leading-[22px] my-20 text-gray-700 '>  </p>
 
-
-
-
-
-
                     </article>
 
                 </section>
@@ -129,4 +123,4 @@ const HowtoOrder = () => {
     )
 }
 
-export default HowtoOrder
+export default HowtoOrder;  

@@ -78,7 +78,7 @@ const Header = () => {
     return (
         <>
             <article className=' w-[85%] m-auto font-[Merriweather] '>
-                <section className=''>
+                <section className=' mb-4'>
 
                     {/* LANGUAGE DROPDOWN  1st */}
                     <div
@@ -200,13 +200,13 @@ const Header = () => {
 
             {/* Navigation options 3rd */}
             <nav className=" py-1 bg-white font-[Merriweather]" >
-                <div className='flex items-center justify-between text-[22px] w-5xl m-auto mt-1 mb-1 text-gray-800 '>
+                <div className='flex items-center justify-between text-[20px] w-5xl m-auto mt-1 mb-1 text-gray-800 '>
 
                     <Link className='border-b-4 border-[#86133a]' to="/home">Home</Link>
                     <Link className='headnav-btn text-rose-500' to="/shop" >Shop</Link>
                     <Link className='headnav-btn' to="/how-to-order">How to order?</Link>
                     <Link className='headnav-btn' to="/our-quality-meat">Our quality meat</Link>
-                    <Link className='headnav-btn' to="/mission">Mission & Vision</Link>
+                    <Link className='headnav-btn' to="/mission-and-vision">Mission & Vision</Link>
                     <Link className='headnav-btn' to="/news">News</Link>
                     <Link className='headnav-btn' to="/help">Help</Link>
                     <Link className='headnav-btn' to="/contact">Contact</Link>
@@ -221,13 +221,13 @@ const Header = () => {
                 ${showSticky ? "translate-y-0" : "-translate-y-full"}
                 `}
             >
-                <div className='flex items-center justify-between text-[22px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
+                <div className='flex items-center justify-between text-[20px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
 
                     <Link className='border-b-4 border-[#86133a]' to="/home">Home</Link>
                     <Link className='headnav-btn text-rose-500' to="/shop" >Shop</Link>
                     <Link className='headnav-btn' to="/how-to-order">How to order?</Link>
                     <Link className='headnav-btn' to="/our-quality-meat">Our quality meat</Link>
-                    <Link className='headnav-btn' to="/mission">Mission & Vision</Link>
+                    <Link className='headnav-btn' to="/mission-and-vision">Mission & Vision</Link>
                     <Link className='headnav-btn' to="/news">News</Link>
                     <Link className='headnav-btn' to="/help">Help</Link>
                     <Link className='headnav-btn' to="/contact">Contact</Link>

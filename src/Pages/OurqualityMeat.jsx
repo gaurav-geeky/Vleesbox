@@ -79,4 +79,5 @@ const OurqualityMeat = () => {
     )
 }
 
-export default OurqualityMeat
+export default OurqualityMeat;  
+

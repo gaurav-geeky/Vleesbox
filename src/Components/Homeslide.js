@@ -1,3 +1,4 @@
+//  total 9 data. 
 
 const Homeslide = [
     {
