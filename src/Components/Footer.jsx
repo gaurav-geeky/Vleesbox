@@ -173,39 +173,58 @@ const Footer = () => {
                     <div >
                         <p className='text-[13px] p-3 ' >Showing our latest reviews </p>
 
-                        <ul className='text-[18px] space-y-3 border-b pb-3'>
-                            <li>
-                                <p className='flex items-start gap-2 font-[Arial] text-[18px]'>
-                                    <span className='text-green-600 text-[30px]'>“ </span>
+                        <ul className='text-[18px] space-y-5 border-b pb-3 font-[Arial]'>
 
-                                    <span className='line-clamp-1 font-bold '>Dit is kwaliteit van vers gelevert tot in je maag</span>
-                                </p>
-                                <p className="text-[12px] mt-1" >
-                                    <span className='font-bold'>Reweghs Jean Pierre, </span>
-                                    30 January </p>
+                            {/* 1st */}
+                            <li className="leading-5">
+                                <div className="flex gap-2">
+                                    <span className="text-green-600 text-[30px] leading-none">“</span>
+
+                                    <div>
+                                        <p className="font-bold line-clamp-1">
+                                            Dit is kwaliteit van vers gelevert tot in je maag
+                                        </p>
+
+                                        <p className="text-[12px] mt-1">
+                                            <span className="font-bold">Reweghs Jean Pierre,</span> 30 January
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
 
-                            <li>
-                                <p className='flex items-start gap-2 font-[Arial] text-[18px] '>
-                                    <span className='text-green-600 text-[30px]'>“ </span>
 
-                                    <span className='line-clamp-1 font-bold '> We zijn altijd tevreden geweest</span>
-                                </p>
-                                <p className="text-[12px] mt-1" >
-                                    <span className='font-bold'> Peggy, </span>
-                                    30 January </p>
+                            {/* 2nd */}
+                            <li className="leading-5">
+                                <div className="flex gap-2">
+                                    <span className="text-green-600 text-[30px] leading-none">“</span>
+
+                                    <div>
+                                        <p className="font-bold line-clamp-1">
+                                            We zijn altijd tevreden geweest
+                                        </p>
+
+                                        <p className="text-[12px] mt-1" >
+                                            <span className='font-bold'> Peggy, </span> 30 January
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
 
-                            <li >
-                                <p className='flex items-start gap-2 font-[Arial]  text-[18px]'>
-                                    <span className='text-green-600 text-[30px] '>“ </span>
+                            {/* 3rd */}
+                            <li className="leading-5">
+                                <div className="flex gap-2">
+                                    <span className="text-green-600 text-[30px] leading-none">“</span>
 
-                                    <span className='line-clamp-1 font-bold '>Kwaliteitsvlees en kwaliteitsservice.</span>
-                                </p>
+                                    <div>
+                                        <p className="font-bold line-clamp-1">
+                                            Kwaliteitsvlees en kwaliteitsservice.
+                                        </p>
 
-                                <p className="text-[12px] mt-1" >
-                                    <span className='font-bold' >Erwin, </span>
-                                    30 January </p>
+                                        <p className="text-[12px] mt-1" >
+                                            <span className='font-bold'> Erwin, </span> 30 January
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
 
                         </ul>

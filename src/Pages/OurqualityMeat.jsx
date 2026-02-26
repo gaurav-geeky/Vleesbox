@@ -31,7 +31,7 @@ const OurqualityMeat = () => {
                 {/* left sidebar */}
                 <section className='flex-1  px-2 font-[Merriweather] border-r border-gray-300 p-4  '>
 
-                    <h1 className='text-[30px] text-[#86133a] leading-9 mb-4 font-semibold'>How to proceed?</h1>
+                    <h1 className='text-[30px] text-[#86133a] leading-9 mb-4 font-semibold'> Our quality meat </h1>
 
                     {/* Our quality meat section */}
                     <article>
