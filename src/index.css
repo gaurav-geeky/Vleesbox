@@ -1,38 +1,70 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
 :root {
-  --swiper-theme-color: #222;   /* active dot color */
+  --swiper-theme-color: #222;
+  /* active dot color */
 }
 
 /*  home slider */
 .swiper-pagination {
   position: relative !important;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 /* inactive dots */
 .swiper-pagination-bullet {
   background: #cfcfcf;
-  opacity: 1; 
+  opacity: 1;
   width: 8px;
   height: 8px;
 }
 
 /* active dot */
 .swiper-pagination-bullet-active {
-  background: #222;   /* dark dot */
+  background: #222;
+  /* dark dot */
 }
 
-@import "tailwindcss";  
+
+/*  Order slider hover effect */
+.orderslider-btn {
+  @apply 
+  z-10
+  absolute top-1/2 
+  -translate-y-1/2  
+  flex items-center justify-center 
+  rounded-full border-4 w-8 h-8 
+  transition-all duration-100 
+  opacity-0 scale-75
+  cursor-pointer;
+  
+}
+
+.group:hover .orderslider-btn {
+  @apply opacity-100 scale-100 bg-[#86133a] text-white border-white shadow-md;
+}
+
+/* hide button when disabled */
+.custom-prev.swiper-button-disabled,
+.custom-next.swiper-button-disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+}
 
 
 
+/*  header nav menu bar */
+.headnav-btn {
+  @apply  border-b-4 border-transparent;
+}
+
+:hover.headnav-btn {
+  @apply border-b-4 border-[#86133a]
+}
 
 
-
-
+@import "tailwindcss";

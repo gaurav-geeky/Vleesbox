@@ -202,14 +202,14 @@ const Header = () => {
             <nav className=" py-1 bg-white font-[Merriweather]" >
                 <div className='flex items-center justify-between text-[22px] w-5xl m-auto mt-1 mb-1 text-gray-800 '>
 
-                    <Link to="/home">Home</Link>
-                    <Link to="/shop" className="text-rose-500">Shop</Link>
-                    <Link to="/how-to-order">How to order?</Link>
-                    <Link to="/quality">Our quality meat</Link>
-                    <Link to="/mission">Mission & Vision</Link>
-                    <Link to="/news">News</Link>
-                    <Link to="/help">Help</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link className='border-b-4 border-[#86133a]' to="/home">Home</Link>
+                    <Link className='headnav-btn text-rose-500' to="/shop" >Shop</Link>
+                    <Link className='headnav-btn' to="/how-to-order">How to order?</Link>
+                    <Link className='headnav-btn' to="/our-quality-meat">Our quality meat</Link>
+                    <Link className='headnav-btn' to="/mission">Mission & Vision</Link>
+                    <Link className='headnav-btn' to="/news">News</Link>
+                    <Link className='headnav-btn' to="/help">Help</Link>
+                    <Link className='headnav-btn' to="/contact">Contact</Link>
                     
                 </div>
             </nav>
@@ -223,14 +223,14 @@ const Header = () => {
             >
                 <div className='flex items-center justify-between text-[22px]  w-5xl m-auto mt-1 mb-1 text-gray-800 '>
 
-                    <Link to="/home">Home</Link>
-                    <Link to="/shop" className="text-rose-500">Shop</Link>
-                    <Link to="/how-to-order">How to order?</Link>
-                    <Link to="/quality">Our quality meat</Link>
-                    <Link to="/mission">Mission & Vision</Link>
-                    <Link to="/news">News</Link>
-                    <Link to="/help">Help</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link className='border-b-4 border-[#86133a]' to="/home">Home</Link>
+                    <Link className='headnav-btn text-rose-500' to="/shop" >Shop</Link>
+                    <Link className='headnav-btn' to="/how-to-order">How to order?</Link>
+                    <Link className='headnav-btn' to="/our-quality-meat">Our quality meat</Link>
+                    <Link className='headnav-btn' to="/mission">Mission & Vision</Link>
+                    <Link className='headnav-btn' to="/news">News</Link>
+                    <Link className='headnav-btn' to="/help">Help</Link>
+                    <Link className='headnav-btn' to="/contact">Contact</Link>
 
                 </div>
             </nav>

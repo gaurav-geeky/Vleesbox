@@ -48,7 +48,7 @@ const HomeSlider = () => {
                     resistanceRatio={0.85}
                     touchRatio={1}
                     spaceBetween={25}
-                    
+
                     slidesPerView={3}
                     slidesPerGroup={3} // for group slide
                     pagination={{ clickable: true }}
@@ -64,8 +64,6 @@ const HomeSlider = () => {
                         1024: { slidesPerView: 3, slidesPerGroup: 3 },
                     }}
                 >
-
-
                     {Homeslide.map((slide) => (
                         <SwiperSlide key={slide.id}>
                             <Card
@@ -77,7 +75,6 @@ const HomeSlider = () => {
                     ))}
 
                 </Swiper>
-
 
                 {/* LEFT ARROW */}
                 <div className="custom-prev absolute left-[-15px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">

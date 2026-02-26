@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from './Pages/Layout'
 import Shop from './Pages/Shop'
 import HowtoOrder from './Pages/HowtoOrder'
+import OurqualityMeat from './Pages/OurqualityMeat'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='home' element={<Home />} />
             <Route path='shop' element={<Shop />} />
             <Route path='how-to-order' element={<HowtoOrder />} />
+            <Route path='our-quality-meat' element={< OurqualityMeat />} />
 
           </Route>
         </Routes>
