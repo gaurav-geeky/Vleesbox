@@ -12,7 +12,8 @@ import HowtoOrder from './Pages/HowtoOrder'
 import OurqualityMeat from './Pages/OurqualityMeat'
 import MissionandVision from './Pages/MissionandVision'
 import News from './Pages/News'
-News
+import Contact from './Pages/Contact'
+ 
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='our-quality-meat' element={< OurqualityMeat />} />
             <Route path='mission-and-vision' element={< MissionandVision />} />
             <Route path='news' element={<News />} />
+            <Route path='contact' element={<Contact />} />
 
           </Route>
         </Routes>

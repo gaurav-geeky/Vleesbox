@@ -367,11 +367,11 @@ const Footer = () => {
             <section className='bg-white h-15 flex justify-between items-center text-[12px]  font-medium font-[Merriweather] uppercase mx-20 '>
                 <div className='text-[#86133A]'>
                     © Vlees-in-the-Box 2026 -
-                    <span className='text-[#86133A] hover:text-rose-400'> Disclaimer</span> -
+                    <span className='text-[#86133A] hover:text-[#EAA6BB]'> Disclaimer</span> -
 
-                    <span className='text-[#86133A] hover:text-rose-400'> GENERAL CONDITIONS</span>
+                    <span className='text-[#86133A] hover:text-[#EAA6BB]'> GENERAL CONDITIONS</span>
                 </div>
-                <div className='text-[#86133A] hover:text-rose-400'>
+                <div className='text-[#86133A] hover:text-[#EAA6BB]'>
                     Technogiq
                 </div>
             </section>
