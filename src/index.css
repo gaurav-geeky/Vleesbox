@@ -32,16 +32,8 @@
 
 /*  Order slider hover effect */
 .orderslider-btn {
-  @apply 
-  z-10
-  absolute top-1/2 
-  -translate-y-1/2  
-  flex items-center justify-center 
-  rounded-full border-4 w-8 h-8 
-  transition-all duration-100 
-  opacity-0 scale-75
-  cursor-pointer;
-  
+  @apply z-10 absolute top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full border-4 w-8 h-8 transition-all duration-100 opacity-0 scale-75 cursor-pointer;
+
 }
 
 .group:hover .orderslider-btn {
@@ -59,12 +51,16 @@
 
 /*  header nav menu bar */
 .headnav-btn {
-  @apply  border-b-4 border-transparent;
+  @apply border-b-4 border-transparent;
 }
 
 :hover.headnav-btn {
-  @apply border-b-4 border-[#86133a]
+  @apply 
+  border-b-4 
+  border-[#86133a] 
+ 
 }
+
 
 
 @import "tailwindcss";

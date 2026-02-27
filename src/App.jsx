@@ -13,7 +13,10 @@ import OurqualityMeat from './Pages/OurqualityMeat'
 import MissionandVision from './Pages/MissionandVision'
 import News from './Pages/News'
 import Contact from './Pages/Contact'
- 
+import Signin from './Pages/Signin'
+import Register from './Pages/Register'
+import Help from './Pages/Help'
+
 
 function App() {
 
@@ -35,6 +38,10 @@ function App() {
             <Route path='mission-and-vision' element={< MissionandVision />} />
             <Route path='news' element={<News />} />
             <Route path='contact' element={<Contact />} />
+            <Route path='signin' element={<Signin />} />
+            <Route path='register' element={<Register />} />
+            <Route path='help' element={<Help />} />
+
 
           </Route>
         </Routes>

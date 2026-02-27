@@ -2,6 +2,9 @@
 import React from 'react'
 import { FiHome } from "react-icons/fi";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { IoIosCall } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Contact = () => {
@@ -11,11 +14,15 @@ const Contact = () => {
     return (
         <>
 
+
             <section className='bg-[#f3f3f3] ' >
                 <h1 className='text-[22px] leading-9 text-gray-600 flex items-center gap-2
                 font-[Merriweather]  bg-[#f3f3f3] px-30 py-3 '>
 
-                    <FiHome className='hover:text-[#EAA6BB] ' size={22} />
+                    <Link to="/home">
+                        <FiHome className="hover:text-[#EAA6BB]" size={22} />
+                    </Link>
+
                     <HiOutlineArrowLongRight />
                     <p className=' text-[24px] '> Contact Us </p>
                 </h1>
@@ -23,16 +30,16 @@ const Contact = () => {
 
             <section className='bg-[#f3f3f3] '>
 
-                <section className="flex items-start  gap-5 max-w-[1200px] mx-auto  px-6 bg-[#f3f3f3] border  ">
+                <section className="flex items-start  gap-5 max-w-[1200px] mx-auto  px-6 bg-[#f3f3f3]   ">
 
                     {/* left sidebar */}
-                    <section className='flex-1 px-2 font-[Merriweather] border-r border-gray-300 p-4 max-w-[790px] '>
+                    <section className='flex-1 px-2 font-[Merriweather]  border-gray-300 p-4 max-w-[790px] '>
 
+
+                        <h2 className='text-[22px] leading-6 mb-4 px-4 font-semibold uppercase text-[#86133a] ' > contact </h2>
 
                         {/* contact form */}
                         <article className=' p-3 text-[#86133a] '>
-
-                            <h2 className='text-[22px] leading-6 mb-4 font-semibold uppercase ' > contact </h2>
 
                             <div>
                                 <p className=' text-[16px] font-[Merriweather] py-[5px] '>Name</p>
@@ -40,9 +47,7 @@ const Contact = () => {
                                 <input
                                     placeholder='Name'
                                     className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black 
-                                 placeholder:text-[#a2b0d5]
-                                  ${placeholdercss} `}
+                                border border-[#86133a] focus:outline-none text-black ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -55,9 +60,7 @@ const Contact = () => {
                                     placeholder='Company'
 
                                     className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black 
-                                 placeholder:text-[#a2b0d5]
-                                  ${placeholdercss} `}
+                                border border-[#86133a] focus:outline-none text-black ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -69,9 +72,7 @@ const Contact = () => {
                                     placeholder='E-mail'
 
                                     className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black 
-                                 placeholder:text-[#a2b0d5]
-                                  ${placeholdercss} `}
+                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -83,9 +84,7 @@ const Contact = () => {
                                     placeholder='Phone'
 
                                     className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black 
-                                 placeholder:text-[#a2b0d5]
-                                  ${placeholdercss} `}
+                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -103,9 +102,7 @@ const Contact = () => {
                                     focus:border-red-600
                                     focus:outline-none
                                     text-black
-                                    placeholder:text-[#a2b0d5]
-                                    resize
-                                    ${placeholdercss}`}
+                                    resize ${placeholdercss}`}
                                 />
                                 {/*        */}
 
@@ -115,10 +112,7 @@ const Contact = () => {
                                     placeholder='City'
 
                                     className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black 
-                                 placeholder:text-[#a2b0d5]
-                                  ${placeholdercss} `}
-
+                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
                                     type="text"
                                 />
                                 {/*      */}
@@ -133,9 +127,7 @@ const Contact = () => {
                                     focus:border-red-600
                                     focus:outline-none
                                     text-black
-                                    placeholder:text-[#a2b0d5]
-                                    resize
-                                    ${placeholdercss}`}
+                                    resize  ${placeholdercss}`}
                                 />
 
                                 {/* checkbox */}
@@ -163,11 +155,19 @@ const Contact = () => {
 
 
                     {/* right sidebar */}
-                    <section className=" max-w-[300px] bg-amber-100  shrink-0 py-2 ">
+                    <section className=" max-w-[300px]  shrink-0 py-2 ">
 
-                        sdgasfdgt cum rerum praesentium, labore quos vero molestias, vel dicta! Sit sapiente et facere natus asperiores, consectetur officia, blanditiis eaque dignissimos autem quo incidunt enim accusamus fugit tempora nam doloremque labore suscipit saepe! Eligendi ullam, iure ipsum voluptas impedit optio debitis quidem possimus illum, cupiditate autem voluptatibus vel, reiciendis distictio explicabo quas labore sit inventore voluptates eligendi. Expedita deleniti a totam consectetur!
-                        sdgasfdgt cum rerum praesentium, labore quos vero molestias, vel dicta! Sit sapientautem quo incidunt enim accusamus fugit tempora nam doloremque labore suscipit saepe! Eligendi ullam, iure ipsum voluptas impedit optio debitis quidem possimus illum, cupiditate autem voluptatibus vel, reiciendis distictio explicabo quas labore sit inventore voluptates eligendi. Expedita deleniti a totam consectetur!
-
+                        <div className=' text-[#86133a] text-[16px font-[Merriweather] leading-7 pt-[50px] pl-[50px] ' >
+                            <p className='py-4'>
+                                Contact our customer service
+                            </p>
+                            <p className='flex items-center gap-2 hover:text-[#EAA6BB] ' >
+                                <IoIosCall />  00 32 11 70 50 80
+                            </p>
+                            <p className='flex items-center gap-2 hover:text-[#EAA6BB] '>
+                                <MdEmail />  info@vlees-in-the-box.be
+                            </p>
+                        </div>
 
 
                     </section>

@@ -235,6 +235,7 @@ const Home = () => {
 
         <div className="max-w-[85%] mx-auto relative ">
 
+          {/* video play section  */}
           {!play ?
             (<>
               <img src="https://www.vlees-in-the-box.be/image/cache/catalog/banner/vlees-video-1280x400w.jpg.webp" alt="vlees" />

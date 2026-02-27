@@ -71,7 +71,7 @@ const Footer = () => {
                         </button>
 
                         {/* REVIEW CARDS */}
-                        <div className="flex gap-4 flex-1 overflow-hidden justify-between border border-blue-600 max-w-5xl">
+                        <div className="flex gap-4 flex-1 overflow-hidden justify-between  max-w-5xl">
 
                             {[0, 1, 2, 3].map((offset) => {
                                 const review = reviews[(index + offset) % reviews.length];
@@ -269,7 +269,7 @@ const Footer = () => {
                 <article className='flex flex-col gap-5 w-[386px] p-[10px] '>
                     <h1 className='text-[28px] font-bold'>About Us</h1>
 
-                    <ul className='flex flex-col gap-4 text-[13px] border '>
+                    <ul className='flex flex-col gap-4 text-[13px]  '>
                         <li className='inline-flex max-w-[200px]'>
                             <MdArrowRight size={25} className='mr-3' />
                             Our mission and vision</li>
@@ -344,7 +344,7 @@ const Footer = () => {
                 <article className='flex flex-col gap-5 w-[386px] p-[10px] '>
                     <h1 className='text-[28px] font-bold'>PAYMENT OPTIONS</h1>
 
-                    <div className='grid grid-cols-2 gap-3 border w-[200px] '>
+                    <div className='grid grid-cols-2 gap-3  w-[200px] '>
                         <img className='w-[65px] h-auto '
                             src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/Old_Visa_Logo.svg_-130x84fill.png.webp" alt="visa" />
 
