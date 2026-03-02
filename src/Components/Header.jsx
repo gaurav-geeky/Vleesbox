@@ -232,7 +232,7 @@ const Header = () => {
                                 </Link>
                             </div>
 
-                            <div className=' hidden lg:flex border gap-5'>
+                            <div className=' hidden lg:flex gap-5'>
                                 <Link
                                     to="/signin"
                                     className='text-[#86133a] text-[12px] lg:text-[17px] font-semibold hover:text-[#f9b4ca] px-2 whitespace-nowrap' >
