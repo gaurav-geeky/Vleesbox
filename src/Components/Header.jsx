@@ -76,6 +76,7 @@ const Header = () => {
         "Vegetarian",
         "Pasta",
         "wok",
+        
     ];
 
 
@@ -197,7 +198,7 @@ const Header = () => {
                                                             onClick={() => {
                                                                 setCategory(item);
                                                             }}
-                                                            className="px-4 py-3 hover:bg-[#d89aaa] cursor-pointer"
+                                                            className="px-4 py-3 hover:bg-[#d89aaa] cursor-pointer "
                                                         >
                                                             {item}
                                                         </li>

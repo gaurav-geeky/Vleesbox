@@ -37,7 +37,7 @@ const Orderslider = ({ images }) => {
                         <img
                             src={img}
                             alt="slide"
-                            className="w-full h-auto object-cover "
+                            className="w-full h-auto object-cover  "
                         />
                     </SwiperSlide>
                 ))}

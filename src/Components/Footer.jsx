@@ -117,7 +117,7 @@ const Footer = () => {
             </section>
 
             {/* 2nd footer section  */}
-            <section className=' max-h-1/2 py-[40px] px-[20px] border-2 border-t-[#86133A] '>
+            <section className=' max-h-1/2 py-[40px] px-[20px]  '>
 
                 <h1 className='font-[Dancing_Script] text-rose-400 text-[30px] text-center p-3'>
                     Stay tuned for our promos

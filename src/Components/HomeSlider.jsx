@@ -18,7 +18,7 @@ const HomeSlider = () => {
         return (
             <div className="bg-white shadow-md overflow-hidden font-[Merriweather] "> 
             
-                <div className='h-[190px] w-full overflow-hidden  '>
+                <div className='h-[190px] w-full overflow-hidden '>
                     <img src={img} className="w-full h-[190px] hover:scale-110 object-cover transition duration-300  " />
                 </div>
 
