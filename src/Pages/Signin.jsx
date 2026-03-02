@@ -7,6 +7,8 @@ const Signin = () => {
   const inputStyle =
     "w-full border border-[#86133a] px-3 py-[6px] focus:outline-none focus:border-red-600 hover:border-green-600 text-black";
 
+  const placeholdercss = "placeholder:text-[#a2b0d5] placeholder:font-[Dancing_Script] placeholder:text-[20px]"
+
   return (
     <>
       {/* Breadcrumb */}
@@ -16,7 +18,7 @@ const Signin = () => {
           <Link to="/home">
             <FiHome className="hover:text-[#EAA6BB]" size={22} />
           </Link>
-          
+
           <HiOutlineArrowLongRight />
           <p className="text-[24px]">Account → Login</p>
         </h1>
@@ -44,7 +46,7 @@ const Signin = () => {
                 </p>
               </div>
 
-              <button className="mt-6 bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#f69db9] transition">
+              <button className="mt-6 bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#00B67A] hover:text-black transition">
                 Continue
               </button>
             </div>
@@ -55,13 +57,25 @@ const Signin = () => {
                 <h3 className="text-[18px] mb-4">Returning Customer</h3>
 
                 <div className="flex items-center gap-4 mb-2">
-                  <p className="w-[180px] text-[16px]">E-Mail Address</p>
-                  <input type="email" placeholder="E-Mail Address" className={inputStyle} />
+                  <p className="w-[180px] text-[16px]">
+                    E-Mail Address
+                  </p>
+                  <input
+                    type="email"
+                    placeholder="E-Mail Address"
+                    className={` ${inputStyle} ${placeholdercss} `}
+                  />
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <p className="w-[180px] text-[16px]">Password</p>
-                  <input type="password" placeholder="Password" className={inputStyle} />
+                  <p className="w-[180px] text-[16px]">
+                    Password
+                  </p>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    className={` ${inputStyle} ${placeholdercss} `}
+                  />
                 </div>
 
                 <p className="mt-2 text-[15px] hover:underline cursor-pointer">
@@ -69,7 +83,7 @@ const Signin = () => {
                 </p>
               </div>
 
-              <button className="mt-6 bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#f69db9] transition">
+              <button className="mt-6 bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#00B67A] hover:text-black transition">
                 Login
               </button>
             </div>

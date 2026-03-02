@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
 
-    const placeholdercss = "placeholder:text-[#a2b0d5] placeholder:font-[Dancing_Script] placeholder:text-[20px]"
+    const placeholdercss = "placeholder:text-[#a2b0d5] placeholder:font-[Dancing_Script] placeholder:text-[20px]" 
+
+    const tailcss = " w-[750px] py-[6px] px-[12px] focus-within:border-red-600 border border-[#86133a] focus:outline-none text-black"
 
     return (
         <>
@@ -46,8 +48,7 @@ const Contact = () => {
 
                                 <input
                                     placeholder='Name'
-                                    className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black ${placeholdercss} `}
+                                    className={` ${tailcss} ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -59,8 +60,7 @@ const Contact = () => {
                                 <input
                                     placeholder='Company'
 
-                                    className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black ${placeholdercss} `}
+                                    className={` ${tailcss} ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -71,9 +71,7 @@ const Contact = () => {
                                 <input
                                     placeholder='E-mail'
 
-                                    className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
-
+                                    className={`  ${tailcss}  ${placeholdercss} `}
                                     type="text"
                                 />
                                 {/*      */}
@@ -83,8 +81,7 @@ const Contact = () => {
                                 <input
                                     placeholder='Phone'
 
-                                    className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
+                                    className={`  ${tailcss}  ${placeholdercss} `}
 
                                     type="text"
                                 />
@@ -111,8 +108,7 @@ const Contact = () => {
                                 <input
                                     placeholder='City'
 
-                                    className={` w-[750px] py-[6px] px-[12px] focus-within:border-red-600 
-                                border border-[#86133a] focus:outline-none text-black  ${placeholdercss} `}
+                                    className={`  ${tailcss}  ${placeholdercss} `}
                                     type="text"
                                 />
                                 {/*      */}
@@ -136,11 +132,12 @@ const Contact = () => {
                                     <p>I have read and agree to the GENERAL CONDITIONS</p>
                                 </p>
 
+
                                 <button
                                     className=' uppercase bg-[#86133a] text-white text-[13px] py-[10px] px-[20px]
                                     font-semibold
                                     transition duration-300
-                                    hover:bg-[#f69db9] '
+                                    hover:bg-[#00B67A] hover:text-black '
                                 >
                                     <span> submit</span>
                                 </button>

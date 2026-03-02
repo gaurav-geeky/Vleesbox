@@ -5,14 +5,13 @@ import Footer from '../Components/Footer';
 
 const Layout = () => {
     return (
-        <div >
+        <div>
             <Header />
-
             <Outlet />
-
             <Footer />
         </div>
     )
 }
 
-export default Layout;
+export default Layout; 
+

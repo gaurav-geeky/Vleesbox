@@ -3,9 +3,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import { Route, Routes } from 'react-router-dom'
 
 import Home from './Pages/Home'
-import { Route, Routes } from 'react-router-dom'
 import Layout from './Pages/Layout'
 import Shop from './Pages/Shop'
 import HowtoOrder from './Pages/HowtoOrder'
@@ -16,6 +16,7 @@ import Contact from './Pages/Contact'
 import Signin from './Pages/Signin'
 import Register from './Pages/Register'
 import Help from './Pages/Help'
+import Cart from './Pages/Cart'
 
 
 function App() {
@@ -23,11 +24,13 @@ function App() {
   return (
     <>
       <div>
-        {/* <Header />
-        <Home />
+        {/* <Header /> */}
+        {/* <Home />
         < Footer /> */}
 
+        
         <Routes>
+          
           <Route path='/' element={< Layout />}>
 
             <Route index element={<Home />} />
@@ -41,6 +44,7 @@ function App() {
             <Route path='signin' element={<Signin />} />
             <Route path='register' element={<Register />} />
             <Route path='help' element={<Help />} />
+            <Route path='cart' element={<Cart />} />
 
 
           </Route>

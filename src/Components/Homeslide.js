@@ -1,13 +1,13 @@
 //  total 9 data. 
-import pic1 from "../photos/pic1.jpeg"; 
-import pic2 from "../photos/pic2.jpeg"; 
-import pic3 from "../photos/pic3.jpeg"; 
-import pic4 from "../photos/pic4.jpeg"; 
-import pic5 from "../photos/pic5.jpeg"; 
-import pic6 from "../photos/pic6.jpeg"; 
-import pic7 from "../photos/pic7.jpeg"; 
-import pic8 from "../photos/pic8.jpeg"; 
-import pic9 from "../photos/pic9.jpeg"; 
+import pic1 from "../photos/pic1.jpeg";
+import pic2 from "../photos/pic2.jpeg";
+import pic3 from "../photos/pic3.jpeg";
+import pic4 from "../photos/pic4.jpeg";
+import pic5 from "../photos/pic5.jpeg";
+import pic6 from "../photos/pic6.jpeg";
+import pic7 from "../photos/pic7.jpeg";
+import pic8 from "../photos/pic8.jpeg";
+import pic9 from "../photos/pic9.jpeg";
 
 const Homeslide = [
     {
@@ -18,15 +18,15 @@ const Homeslide = [
     },
 
     {
-        image: pic2,
-        img: "https://www.vlees-in-the-box.be/image/cache/catalog/opgevulde%20kalkoen-2280x600w.png.webp",
+        image: pic3,
+        img: "https://www.vlees-in-the-box.be/image/cache/catalog/steak%20snijden-2280x600w.jpeg.webp",
         title: "Holiday Meat Guide: from Gourmet to Luxury Roulade",
         description: "The holidays are all about togetherness and great food. But which meat fits your Christmas plans best? ",
     },
 
     {
-        image: pic3,
-        img: "https://www.vlees-in-the-box.be/image/cache/catalog/steak%20snijden-2280x600w.jpeg.webp",
+        image: pic2,
+        img: "https://www.vlees-in-the-box.be/image/cache/catalog/opgevulde%20kalkoen-2280x600w.png.webp",
         title: "Steak frying : become a master of the cuisson with these tips",
         description: "Here’s a short guide to help you choose stress-free.GourmetThe classic choice for families and groups of friends.Think mini steaks, chicken strips, medallions and mini burgers. Fun, easy, and everyone cooks exactly what they like.Chicken & Turkey Light, versatile and festive.Top choice: stuffed turkey roulade. It pairs beautifully with winter herbs like thyme and sage.",
     },

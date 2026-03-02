@@ -16,18 +16,18 @@ const HomeSlider = () => {
 
     const Card = ({ img, title, description }) => {
         return (
-            <div className="bg-white shadow-md overflow-hidden "> 
+            <div className="bg-white shadow-md overflow-hidden font-[Merriweather] "> 
             
                 <div className='h-[190px] w-full overflow-hidden  '>
                     <img src={img} className="w-full h-[190px] hover:scale-110 object-cover transition duration-300  " />
                 </div>
 
                 <div className="p-4">
-                    <h3 className="text-[#86133a] font-semibold text-lg">
+                    <h3 className="text-[#86133a] text-lg text-[18px]">
                         {title}
                     </h3>
 
-                    <p className="text-gray-600 text-2xl mt-2 line-clamp-2">
+                    <p className="text-gray-600 text-2xl mt-2 line-clamp-6 h-[190px] text-[24px] ">
                         {description}
                     </p>
 
@@ -70,7 +70,7 @@ const HomeSlider = () => {
                     {Homeslide.map((slide) => (
                         <SwiperSlide key={slide.id}>
                             <Card
-                                img={slide.img}
+                                img={slide.image}
                                 title={slide.title}
                                 description={slide.description}
                             />

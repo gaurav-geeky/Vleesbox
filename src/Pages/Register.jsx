@@ -9,11 +9,13 @@ const Register = () => {
     const inputStyle =
         "w-full max-w-[500px] border border-[#86133a] px-3 py-[7px] focus:outline-none focus:border-red-600 hover:border-green-600 text-black";
 
-    return ( 
+    const placeholdercss = "placeholder:text-[#a2b0d5] placeholder:font-[Dancing_Script] placeholder:text-[20px]"
+
+    return (
         <>
             {/* Breadcrumb */}
             <section className="bg-[#f3f3f3]">
-                <h1 className="text-[22px] leading-9 text-gray-600 flex items-center gap-2 font-[Merriweather] px-30 py-3">
+                <h1 className="text-[22px] leading-9 text-gray-600  flex items-center gap-2 font-[Merriweather] px-30 py-3">
                     <Link to="/home">
                         <FiHome className="hover:text-[#EAA6BB]" size={22} />
                     </Link>
@@ -41,23 +43,23 @@ const Register = () => {
 
                         <div>
                             <label className="block text-[16px] mb-1">First Name *</label>
-                            <input type="text" placeholder="First Name" className={inputStyle} />
+                            <input type="text" placeholder="First Name" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
 
                         <div>
                             <label className="block text-[16px] mb-1">Last Name *</label>
-                            <input type="text" 
-                            placeholder="Last Name" className={inputStyle} />
+                            <input type="text"
+                                placeholder="Last Name" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
 
                         <div>
                             <label className="block text-[16px] mb-1">E-Mail *</label>
-                            <input type="email" placeholder="E-Mail" className={inputStyle} />
+                            <input type="email" placeholder="E-Mail" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
 
                         <div>
                             <label className="block text-[16px] mb-1">Telephone *</label>
-                            <input type="text" placeholder="Telephone" className={inputStyle} />
+                            <input type="text" placeholder="Telephone" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
 
                     </div>
@@ -68,12 +70,12 @@ const Register = () => {
                     <div className="space-y-4">
                         <div>
                             <label className="block text-[16px] mb-1">Password *</label>
-                            <input type="password" placeholder="Password" className={inputStyle} />
+                            <input type="password" placeholder="Password" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
 
                         <div>
                             <label className="block text-[16px] mb-1">Password Confirm *</label>
-                            <input type="password" placeholder="Password Confirm" className={inputStyle} />
+                            <input type="password" placeholder="Password Confirm" className={` ${inputStyle} ${placeholdercss} `} />
                         </div>
                     </div>
 
@@ -101,7 +103,7 @@ const Register = () => {
                     </div>
 
                     {/* BUTTON */}
-                    <button className="mt-6 w-full bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#f69db9] transition">
+                    <button className="mt-6 w-full bg-[#86133a] text-white uppercase text-[13px] font-semibold py-3 hover:bg-[#00B67A] hover:text-black transition">
                         Continue
                     </button>
 
