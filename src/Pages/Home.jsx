@@ -15,7 +15,8 @@ const Home = () => {
   const Banner = ({
     title,
     img,
-    height = "h-[420px]",
+    height = "",
+    // height = "h-[420px]"    keeping default h none, give manually to each,
     text = "text-4xl",
   }) => (
     <div className="relative group cursor-pointer overflow-hidden">
@@ -24,7 +25,7 @@ const Home = () => {
       <img
         src={img}
         alt=""
-        className={`w-full ${height} object-cover transition duration-500 group-hover:scale-105`}
+        className={`w-full ${height}  object-cover transition duration-500 group-hover:scale-105`}
       />
 
       {/* DARK OVERLAY */}
@@ -47,45 +48,66 @@ const Home = () => {
 
       {/* ================= HERO ================= */}
       <div className="relative font-[Merriweather]">
+
         <img
           src="https://www.vlees-in-the-box.be/image/cache/catalog/banner/Homepage-2400x1092h.png.webp"
           alt="meat"
-          className="w-full h-[420px] md:h-[520px] lg:h-[545px] object-cover"
+          className="w-full max-h-[200px] sm:max-h-[400px] md:max-h-[500px]  lg:h-[550px]  object-cover"
         />
 
-        <div className="absolute bottom-0 w-full bg-[#86133a]/70 text-white text-center px-4 py-6 md:py-8 text-lg md:text-xl">
-          <p>
-            Discover our wide range of high quality meat and meat products.
-          </p>
-          <p>
-            Fresh and refrigerated home delivered from Wednesday to Friday.
-          </p>
+        <div
+          className="absolute bottom-0 w-full  bg-[#86133a]/70 text-white text-center  
+          px-2 sm:px-6 md:px-10 py-2 sm:py-6 md:py-10
+          "
+        >
+          <div className="max-w-4xl mx-auto
+            text-[12px] sm:text-lg md:text-xl lg:text-2xl
+            leading-relaxed md:leading-loose"
+          >
+            <p>
+              Discover our wide range of high quality meat and meat products.
+            </p>
+            <p>
+              Fresh and refrigerated home delivered from Wednesday to Friday.
+            </p>
+          </div>
+
         </div>
+
       </div>
 
       {/* ================= FEATURES ================= */}
-      <article className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3 text-center py-10 font-[Georgia,serif] px-4">
+      <article className="max-w-6xl mx-auto grid gap-8  min-[470px]:grid-cols-3 text-center py-10 font-[Georgia,serif] px-4">
 
         <div className="flex flex-col items-center gap-3">
-          <FaTruck className="text-6xl text-gray-700" />
-          <p className="text-gray-800 text-lg leading-relaxed">
+          <FaTruck className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 text-gray-700" />
+
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800  leading-relaxed" >
             Ordered today and delivered <br />
             the day after tomorrow! <br />
             Delivery from Wednesday to Friday
           </p>
         </div>
+        {/* text-[13px] md:text-[24px] lg:text-[18px] 
+        
+        custom grid style 
+         min-[470px]:grid-cols-3
+        */}
+
 
         <div className="flex flex-col items-center gap-3">
-          <MdEuroSymbol className="text-6xl text-gray-700" />
-          <p className="text-gray-800 text-lg">
+          <MdEuroSymbol className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 text-gray-700" />
+
+          <p className=" text-sm sm:text-base md:text-lg lg:text-xl text-gray-800  leading-relaxed" >
             Free shipping <br />
             from 100 euro
           </p>
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <div className="text-3xl text-gray-700">★★★★★</div>
-          <p className="text-gray-800 text-lg">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 text-gray-700" >★★★★★</div>
+
+          <p className=" text-sm sm:text-base md:text-lg lg:text-xl text-gray-800  leading-relaxed" >
             100% fresh meat <br />
             restaurant quality <br />
             at your home
@@ -95,7 +117,11 @@ const Home = () => {
       </article>
 
       {/* ================= CATEGORY GRID ================= */}
-      <article className="font-[Dancing_Script] max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 px-4 py-6">
+      <article
+        className="font-[Dancing_Script] max-w-6xl mx-auto 
+        grid grid-cols-1 min-[470px]:grid-cols-2 lg:grid-cols-4 gap-3 
+        px-3 sm:px-4 py-6
+      ">
 
         {[
           {
@@ -148,8 +174,8 @@ const Home = () => {
             </p>
             <img
               src={item.img}
-              alt=""
-              className="w-full h-[180px] md:h-[200px] object-cover"
+              alt={item.title}
+              className=" w-full aspect-[3/2] object-cover "
             />
           </div>
         ))}
@@ -157,51 +183,56 @@ const Home = () => {
       </article>
 
       {/* ================= PRODUCTS IN SPOTLIGHT ================= */}
-      <article className="py-6">
-        <p className="font-[Dancing_Script] bg-[#86133A] text-3xl md:text-4xl text-white text-center py-3">
+      <article className="py-2">
+        <p
+          className="font-[Dancing_Script] bg-[#86133A]  text-white text-center py-3
+          text-xl sm:text-2xl md:text-3xl lg:text-4xl
+          ">
           Products in the spotlight
         </p>
 
-        <div className="grid md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-[1px]">
           <Banner
             title="stoofpotje hert"
             img="https://www.vlees-in-the-box.be/image/cache/catalog/zwitserse%20schijf-1200x800w.jpg.webp"
+            className="w-full aspect-[3/2] object-cover"
           />
           <Banner
             title="lamskroontje"
             img="https://www.vlees-in-the-box.be/image/cache/catalog/gemarineerde%20lamskroon-1200x800.jpg.webp"
+            className="w-full aspect-[3/2] object-cover"
           />
         </div>
       </article>
 
       {/* ================= SMALL PRODUCT GRID ================= */}
-      <div className="max-w-7xl mx-auto mt-10 p-4 ">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
+      <div className="max-w-7xl mx-auto mt-1 p-4 ">
+        <div className="grid grid-cols-2 min-[470px]:grid-cols-4 gap-5 my-4">
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/videevulling%20%20-1200x800w.jpg.webp"
-            height="h-[160px] sm:h-[180px]"
+            className="w-full aspect-[3/2] object-cover" 
             title="videevulling"
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/aardappelgratin-1200x800.jpg.webp"
-            height="h-[160px] sm:h-[180px]"
+            className="w-full aspect-[3/2] object-cover" 
             title="aardappelgratin"
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/balletjes%20tomatensaus-1200x800h.jpg.webp"
-            height="h-[160px] sm:h-[180px]"
+            className="w-full aspect-[3/2] object-cover" 
             title={<>balletjes in <br /> tomatensaus</>}
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/tomatenroomsoep%20met%20balletjes-1200x800h.jpg.webp"
-            height="h-[160px] sm:h-[180px]"
+            className="w-full aspect-[3/2] object-cover" 
             title={<>tomatensoep <br /> met <br /> balletjes</>}
             text="text-2xl"
           />
@@ -230,6 +261,7 @@ const Home = () => {
         </article>
 
       </section>
+
 
       <section className=" py-5 ">
 

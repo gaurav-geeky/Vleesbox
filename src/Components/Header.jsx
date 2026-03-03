@@ -76,7 +76,7 @@ const Header = () => {
         "Vegetarian",
         "Pasta",
         "wok",
-        
+
     ];
 
 
@@ -229,7 +229,7 @@ const Header = () => {
                         <div className='flex items-center gap-6   px-1'>
                             <div className=''>
                                 <Link to="/cart">
-                                    <PiShoppingCart size={42} />
+                                    <PiShoppingCart className='w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:h-13 lg:w-13' />
                                 </Link>
                             </div>
 
@@ -317,7 +317,7 @@ const Header = () => {
 
             {/* SLIDE MENU */}
             <div
-                className={`fixed top-0 left-0 h-full w-[280px] bg-white z-50 p-6 shadow-lg transform transition-transform duration-300 ease-out
+                className={`fixed top-0 left-0 h-full w-[220px] bg-white z-50 p-6 shadow-lg transform transition-transform duration-300 ease-out
                 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="flex justify-between items-center mb-6">
@@ -338,14 +338,7 @@ const Header = () => {
             </div>
 
 
-
-
             {/* MOBILE SEARCH PANEL */}
-
-
-
-
-
 
 
         </>
@@ -353,3 +346,6 @@ const Header = () => {
 }
 
 export default Header;
+
+
+///  how to make searhc bar appear below header on click of search icon  search in chat gpt. 

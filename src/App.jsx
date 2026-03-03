@@ -24,12 +24,12 @@ function App() {
   return (
     <>
       <div>
-        {/* <Header /> */}
-        {/* <Home />
-        < Footer /> */}
+        <Header />
+        <Home />
+        {/* < Footer /> */}
 
         
-        <Routes>
+        {/* <Routes>
           
           <Route path='/' element={< Layout />}>
 
@@ -48,7 +48,7 @@ function App() {
 
 
           </Route>
-        </Routes>
+        </Routes> */}
 
       </div>
     </>
@@ -58,7 +58,7 @@ function App() {
 export default App;
 
 
-
+// my project imags 5, 6, so tell me
 
 
 
