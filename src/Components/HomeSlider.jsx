@@ -16,8 +16,8 @@ const HomeSlider = () => {
 
     const Card = ({ img, title, description }) => {
         return (
-            <div className="bg-white shadow-md overflow-hidden font-[Merriweather] "> 
-            
+            <div className="bg-white shadow-md overflow-hidden font-[Merriweather] ">
+
                 <div className='h-[190px] w-full overflow-hidden '>
                     <img src={img} className="w-full h-[190px] hover:scale-110 object-cover transition duration-300  " />
                 </div>
@@ -82,8 +82,8 @@ const HomeSlider = () => {
                 {/* LEFT ARROW */}
                 <div className="custom-prev absolute left-[-15px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
 
-                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
-                        &lt;
+                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition hover:bg-rose-500">
+                        ❮
                     </div>
 
                 </div>
@@ -91,12 +91,11 @@ const HomeSlider = () => {
                 {/* RIGHT ARROW */}
                 <div className="custom-next absolute right-[-15px] top-1/2 -translate-y-1/2 z-10  opacity-0 group-hover:opacity-100 transition duration-300  cursor-pointer hidden md:flex">
 
-                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition font-bold hover:bg-rose-500">
-                        &gt;
+                    <div className=" w-7 h-7 bg-gray-800 text-white rounded-full flex items-center justify-center shadow hover:bg-black transition hover:bg-rose-500">
+                        ❯
                     </div>
 
                 </div>
-
 
             </div>
         </>

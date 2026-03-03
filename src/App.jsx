@@ -24,12 +24,12 @@ function App() {
   return (
     <>
       <div>
-        <Header />
-        <Home />
+        {/* <Header /> */}
+        {/* <Home /> */}
         {/* < Footer /> */}
 
         
-        {/* <Routes>
+        <Routes>
           
           <Route path='/' element={< Layout />}>
 
@@ -48,7 +48,7 @@ function App() {
 
 
           </Route>
-        </Routes> */}
+        </Routes>
 
       </div>
     </>
