@@ -28,16 +28,20 @@ const Footer = () => {
         <>
 
             {/*  1st footer section */}
-            <section className='bg-[#e186a1] '>
-                <h1 className='font-[Dancing_Script] uppercase font-bold text-3xl text-center text-white py-5'>CUSTOMERS HAVE THEIR SAY</h1>
+            <section className='bg-[#e186a1] border-b-2 border-[#86133a] pb-2 '>
+                
+                <h1 className='font-[Dancing_Script] uppercase font-bold text-3xl text-center text-white py-5'>
+                    CUSTOMERS HAVE THEIR SAY
+                </h1>
+                
                 <div className=" p-3 flex justify-center items-center  ">
 
                     {/* 1st footer */}
-                    <div className=" rounded-lg p-6 text-center group ">
+                    <div className=" rounded-lg px-4 mx-1  text-center group ">
                         {/* Title */}
-                        <h2 className="text-2xl font-semibold mb-4">Uitstekend</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Uitstekend</h2>
                         {/* Stars */}
-                        <div className="flex justify-center gap-2 mb-3 ">
+                        <div className="flex justify-center gap-2 mb-2 ">
                             {[...Array(5)].map((_, i) => (
                                 <div
                                     key={i}
@@ -61,7 +65,7 @@ const Footer = () => {
 
 
                     {/* ⭐ Slider  */}
-                    <div className="flex  items-center gap-4 w-full ">
+                    <div className="flex items-center gap-2 max-w-5xl  ">
 
                         {/* LEFT BUTTON */}
                         <button
@@ -71,7 +75,7 @@ const Footer = () => {
                         </button>
 
                         {/* REVIEW CARDS */}
-                        <div className="flex gap-4 flex-1 overflow-hidden justify-between  max-w-5xl">
+                        <div className="flex gap-4 flex-1 overflow-hidden justify-between  w-full">
 
                             {[0, 1, 2, 3].map((offset) => {
                                 const review = reviews[(index + offset) % reviews.length];
@@ -79,7 +83,7 @@ const Footer = () => {
                                 return (
                                     <div
                                         key={offset}
-                                        className="rounded-lg p-6  w-[220px] shrink-0"
+                                        className="rounded-lg p-2  w-[220px]  shrink-0"
                                     >
                                         <div className="flex gap-1 text-green-600 mb-2 group">
                                             {[...Array(5)].map((_, i) => (
@@ -119,7 +123,7 @@ const Footer = () => {
             {/* 2nd footer section  */}
             <section className=' max-h-1/2 py-[40px] px-[20px]  '>
 
-                <h1 className='font-[Dancing_Script] text-rose-400 text-[30px] text-center p-3'>
+                <h1 className='font-[Dancing_Script] text-rose-400 text-[30px] text-center p-3  '>
                     Stay tuned for our promos
                 </h1>
 

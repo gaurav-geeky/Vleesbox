@@ -506,3 +506,4 @@ const News = () => {
 
 export default News;
 
+// w-full  object-cover h-[220px]  sm:h-[300px] md:h-[380px] lg:aspect-[200/91]

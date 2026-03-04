@@ -86,7 +86,8 @@ const Header = () => {
                 <section className=' mb-4 '>
 
                     <div
-                        className="flex justify-between lg:justify-end pr-10 py-2  "
+                        className="flex justify-between py-2 border-b  border-gray-300  
+                         lg:justify-end lg:pr-10 lg:py-2 lg:border-none  "
                     >
 
                         {/* LEFT SIDE (hidden on large desktop) */}
@@ -140,10 +141,12 @@ const Header = () => {
 
                         </div>
                     </div>
+
+
                     {/* LANGUAGE DROPDOWN END                     
                     category dropdown start 2nd */}
 
-                    <div className=' flex justify-between lg:justify-around items-center'>
+                    <div className=' flex justify-between py-2  lg:justify-around items-center'>
 
                         <div className='  flex items-start'>
 

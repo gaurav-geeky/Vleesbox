@@ -52,7 +52,7 @@ const Home = () => {
         <img
           src="https://www.vlees-in-the-box.be/image/cache/catalog/banner/Homepage-2400x1092h.png.webp"
           alt="meat"
-          className="w-full max-h-[200px] sm:max-h-[400px] md:max-h-[500px]  lg:h-[550px]  object-cover"
+          className="w-full object-cover h-[200px] sm:h-[350px] md:h-[380px] lg:h-[450px] xl:h-[530px]  "
         />
 
         <div
@@ -60,9 +60,9 @@ const Home = () => {
           px-2 sm:px-6 md:px-10 py-2 sm:py-6 md:py-10
           "
         >
-          <div className="max-w-4xl mx-auto
-            text-[12px] sm:text-lg md:text-xl lg:text-2xl
-            leading-relaxed md:leading-loose"
+          <div
+            className="max-w-4xl mx-auto text-[10px] sm:text-lg md:text-xl 
+            leading-relaxed "
           >
             <p>
               Discover our wide range of high quality meat and meat products.
@@ -211,28 +211,28 @@ const Home = () => {
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/videevulling%20%20-1200x800w.jpg.webp"
-            className="w-full aspect-[3/2] object-cover" 
+            className="w-full aspect-[3/2] object-cover"
             title="videevulling"
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/aardappelgratin-1200x800.jpg.webp"
-            className="w-full aspect-[3/2] object-cover" 
+            className="w-full aspect-[3/2] object-cover"
             title="aardappelgratin"
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/balletjes%20tomatensaus-1200x800h.jpg.webp"
-            className="w-full aspect-[3/2] object-cover" 
+            className="w-full aspect-[3/2] object-cover"
             title={<>balletjes in <br /> tomatensaus</>}
             text="text-2xl"
           />
 
           <Banner
             img="https://www.vlees-in-the-box.be/image/cache/catalog/tomatenroomsoep%20met%20balletjes-1200x800h.jpg.webp"
-            className="w-full aspect-[3/2] object-cover" 
+            className="w-full aspect-[3/2] object-cover"
             title={<>tomatensoep <br /> met <br /> balletjes</>}
             text="text-2xl"
           />
