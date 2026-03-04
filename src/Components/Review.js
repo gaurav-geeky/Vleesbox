@@ -41,4 +41,15 @@ const reviews = [
     },
 ];
 
-export default reviews; 
+export default reviews;
+
+/* 
+
+full screen 1440 - 4 cards ,
+ 1290 - 3 cards,
+  1040 - 2 cards , 
+  at 790 px 1 card, and 
+  at 560 px no card 
+
+   min-[560px]:flex
+*/

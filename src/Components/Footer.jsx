@@ -32,7 +32,7 @@ const Footer = () => {
             {/*  1st footer section */}
             <section className='bg-[#e186a1] border-b-2 border-[#86133a] pb-2 '>
 
-                <h1 className='font-[Dancing_Script] uppercase font-bold text-3xl text-center text-white py-5'>
+                <h1 className='font-[Dancing_Script] uppercase font-bold text-xl md:text-2xl lg:text-3xl text-center text-white py-5'>
                     CUSTOMERS HAVE THEIR SAY
                 </h1>
 
@@ -67,7 +67,8 @@ const Footer = () => {
 
 
                     {/* ⭐ Slider  */}
-                    <div className="flex items-center gap-2 max-w-5xl  ">
+                    {/* <div className="flex items-center gap-2 max-w-5xl  "> */}
+                    <div className=' hidden min-[560px]:flex items-center gap-2 max-w-5xl ' >
 
                         {/* LEFT BUTTON */}
                         <button
@@ -86,7 +87,12 @@ const Footer = () => {
                                 return (
                                     <div
                                         key={offset}
-                                        className="rounded-lg p-2  w-[220px]  shrink-0"
+                                        // className="rounded-lg p-2 w-[220px] shrink-0"
+                                        className={`rounded-lg p-2 w-[220px] shrink-0
+                                ${offset === 1 ? "hidden min-[1040px]:block" : ""}
+                                ${offset === 2 ? "hidden min-[1290px]:block" : ""}
+                                ${offset === 3 ? "hidden min-[1440px]:block" : ""}
+                                    `}
                                     >
                                         <div className="flex gap-1 text-green-600 mb-2 group">
                                             {[...Array(5)].map((_, i) => (
@@ -124,19 +130,20 @@ const Footer = () => {
             </section>
 
             {/* 2nd footer section  */}
-            <section className=' max-h-1/2 py-[40px] px-[20px]  '>
+            <section className=' py-[40px] px-[20px]  '>
 
                 <h1 className='font-[Dancing_Script] text-rose-400 text-[30px] text-center p-3  '>
                     Stay tuned for our promos
                 </h1>
 
-                <div className='m-auto max-w-xl flex items-center justify-center '>
+                <div className=' m-auto max-w-xl flex items-center justify-center '>
 
                     <input className=' flex-1 border hover:border-[#86133a] max-w-full focus:outline-none focus:ring-0 font-[Merriweather] p-1 px-3 h-9'
                         type="text"
-                        placeholder='Enter your email address' />
+                        placeholder='Enter your email address'
+                    />
 
-                    <button className=' font-[Merriweather] p-2 bg-[#86133a] text-white font-medium text-[12px] h-9'>Submit</button>
+                    <button className='shrink-0 font-[Merriweather] p-2 bg-[#86133a] text-white font-medium text-[12px] h-9'>Submit</button>
                 </div>
             </section>
 
@@ -146,9 +153,9 @@ const Footer = () => {
 
 
                 {/*  1st article */}
-                <article className=' text-white flex flex-col gap-4 w-[386px] p-[10px] '>
+                <article className=' text-white flex flex-col gap-4 max-w-[386px] p-[10px] border '>
 
-                    <div className='text-[25px] font-bold  ' > OUR MISSION </div>
+                    <div className='text-[25px] font-bold border ' > OUR MISSION </div>
 
                     <div className='text-[13px] ' >Meat-in-the-box is a webshop / online butcher shop, mainly selling fresh meat. We start from the carcass, cut it, sell the result as high-quality fresh meat and meat preparations.</div>
 
@@ -163,7 +170,7 @@ const Footer = () => {
 
 
                 {/* 2nd article */}
-                <article className=' text-white flex flex-col gap-3 w-[386px] p-[10px] ' >
+                <article className=' text-white flex flex-col gap-3 w-[386px] p-[10px] border ' >
                     <img className='w-[386px]' src="https://www.vlees-in-the-box.be/image/cache/catalog/logo/logo%20VIB-1031x160.png.webp" alt="" />
 
                     <div className="text-white text-lg font-medium text-[14px] text-center p-3 flex items-center justify-center">
@@ -248,7 +255,7 @@ const Footer = () => {
                 </article>
 
                 {/* 3rd article   */}
-                <article className='flex flex-col gap-5 w-[386px] p-[10px] ' >
+                <article className='flex flex-col gap-5 w-[386px] p-[10px] text-white border ' >
                     <p className='text-[28px] text-white font-bold '>A QUESTION? </p>
 
                     <div className='text-[30px] text-white '>
@@ -371,6 +378,7 @@ const Footer = () => {
                 </article>
             </section>
 
+            {/* 5th footer section  */}
             <section className='bg-white h-15 flex justify-between items-center text-[12px]  font-medium font-[Merriweather] uppercase mx-20 '>
                 <div className='text-[#86133A]'>
                     © Vlees-in-the-Box 2026 -
