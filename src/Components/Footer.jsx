@@ -10,6 +10,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
 
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 
 const Footer = () => {
@@ -29,11 +31,11 @@ const Footer = () => {
 
             {/*  1st footer section */}
             <section className='bg-[#e186a1] border-b-2 border-[#86133a] pb-2 '>
-                
+
                 <h1 className='font-[Dancing_Script] uppercase font-bold text-3xl text-center text-white py-5'>
                     CUSTOMERS HAVE THEIR SAY
                 </h1>
-                
+
                 <div className=" p-3 flex justify-center items-center  ">
 
                     {/* 1st footer */}
@@ -70,8 +72,9 @@ const Footer = () => {
                         {/* LEFT BUTTON */}
                         <button
                             onClick={prev}
-                            className="bg-white rounded-full p-2 shadow"
-                        >  <CiCircleChevLeft />
+                            className="border rounded-full p-1 shadow hover:bg-blue-200"
+                        >
+                            <MdKeyboardArrowLeft />
                         </button>
 
                         {/* REVIEW CARDS */}
@@ -111,8 +114,8 @@ const Footer = () => {
                         {/* RIGHT BUTTON */}
                         <button
                             onClick={next}
-                            className="bg-white rounded-full p-2 shadow"
-                        >   <CiCircleChevRight />
+                            className="border rounded-full p-1 shadow hover:bg-blue-200  "
+                        >   <MdKeyboardArrowRight />
                         </button>
                     </div>
 
