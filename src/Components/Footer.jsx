@@ -147,235 +147,259 @@ const Footer = () => {
                 </div>
             </section>
 
-
             {/* 3rd footer section */}
-            <section className='bg-[#86133A] flex items-start justify-around min-h-[540px] font-[Merriweather] p-[50px] '>
 
+            <section className="bg-[#86133A] font-[Merriweather] text-white px-[40px] py-[50px]">
 
-                {/*  1st article */}
-                <article className=' text-white flex flex-col gap-4 max-w-[386px] p-[10px] border '>
+                <div className="max-w-[1200px] mx-auto grid gap-10
+                        grid-cols-1
+                        sm:grid-cols-2
+                        lg:grid-cols-3">
 
-                    <div className='text-[25px] font-bold border ' > OUR MISSION </div>
+                    {/* 1st article */}
+                    <article className="flex flex-col gap-4">
 
-                    <div className='text-[13px] ' >Meat-in-the-box is a webshop / online butcher shop, mainly selling fresh meat. We start from the carcass, cut it, sell the result as high-quality fresh meat and meat preparations.</div>
+                        <h2 className="text-[24px] sm:text-[26px] lg:text-[28px] font-bold">OUR MISSION</h2>
 
-                    <div className='text-[13px] ' >Vlees-in-the-box wants to offer its customers a wide range of high-quality products with a focus on freshness and service, delivered at home. We sell to private individuals.</div>
+                        <p className="text-[13px]">
+                            Meat-in-the-box is a webshop / online butcher shop, mainly selling fresh meat.
+                            We start from the carcass, cut it, sell the result as high-quality fresh meat
+                            and meat preparations.
+                        </p>
 
-                    <div className='space-y-2'>
-                        <img className='h-[140px] w-[140px] ' src="https://www.vlees-in-the-box.be/image/catalog/vlees.jpg" alt="img" />
+                        <p className="text-[13px]">
+                            Vlees-in-the-box wants to offer its customers a wide range of high-quality
+                            products with a focus on freshness and service, delivered at home.
+                        </p>
 
-                        <p className='text-[13px] ' >Vlees-In-The-Box</p>
-                    </div>
-                </article>
+                        <div className="space-y-2">
+                            <img
+                                className="w-[140px] h-auto"
+                                src="https://www.vlees-in-the-box.be/image/catalog/vlees.jpg"
+                                alt="img"
+                            />
 
+                            <p className="text-[13px]">Vlees-In-The-Box</p>
+                        </div>
 
-                {/* 2nd article */}
-                <article className=' text-white flex flex-col gap-3 w-[386px] p-[10px] border ' >
-                    <img className='w-[386px]' src="https://www.vlees-in-the-box.be/image/cache/catalog/logo/logo%20VIB-1031x160.png.webp" alt="" />
+                    </article>
 
-                    <div className="text-white text-lg font-medium text-[14px] text-center p-3 flex items-center justify-center">
-                        See our 4,803 reviews on
+                    {/* 2nd article */}
+                    <article className="flex flex-col gap-5">
 
-                        <span className="inline-flex items-center gap-1">
-                            <IoStarSharp className="text-green-500 text-xl" />
-                            Trustpilot
-                        </span>
+                        <img
+                            className="w-full max-w-[386px] h-auto"
+                            src="https://www.vlees-in-the-box.be/image/cache/catalog/logo/logo%20VIB-1031x160.png.webp"
+                            alt="logo"
+                        />
 
-                    </div>
+                        <div className="text-[14px] flex items-center gap-2">
+                            See our 4,803 reviews on
+                            <span className="flex items-center gap-1">
+                                <IoStarSharp className="text-green-500 text-lg" />
+                                Trustpilot
+                            </span>
+                        </div>
 
-                    {/* 2nd */}
-                    <div >
-                        <p className='text-[13px] p-3 ' >Showing our latest reviews </p>
+                        <p className="text-[13px]">Showing our latest reviews</p>
 
-                        <ul className='text-[18px] space-y-5 border-b pb-3 font-[Arial]'>
+                        <ul className="space-y-5 border-b pb-4">
 
-                            {/* 1st */}
-                            <li className="leading-5">
-                                <div className="flex gap-2">
-                                    <span className="text-green-600 text-[30px] leading-none">“</span>
-
-                                    <div>
-                                        <p className="font-bold line-clamp-1">
-                                            Dit is kwaliteit van vers gelevert tot in je maag
-                                        </p>
-
-                                        <p className="text-[12px] mt-1">
-                                            <span className="font-bold">Reweghs Jean Pierre,</span> 30 January
-                                        </p>
-                                    </div>
+                            <li className="flex gap-2">
+                                <span className="text-green-600 text-[30px]">“</span>
+                                <div>
+                                    <p className="font-bold text-[13px]">
+                                        Dit is kwaliteit van vers gelevert tot in je maag
+                                    </p>
+                                    <p className="text-[12px]">
+                                        <span className="font-bold">Reweghs Jean Pierre</span>, 30 January
+                                    </p>
                                 </div>
                             </li>
 
-
-                            {/* 2nd */}
-                            <li className="leading-5">
-                                <div className="flex gap-2">
-                                    <span className="text-green-600 text-[30px] leading-none">“</span>
-
-                                    <div>
-                                        <p className="font-bold line-clamp-1">
-                                            We zijn altijd tevreden geweest
-                                        </p>
-
-                                        <p className="text-[12px] mt-1" >
-                                            <span className='font-bold'> Peggy, </span> 30 January
-                                        </p>
-                                    </div>
+                            <li className="flex gap-2">
+                                <span className="text-green-600 text-[30px]">“</span>
+                                <div>
+                                    <p className="font-bold text-[13px]">
+                                        We zijn altijd tevreden geweest
+                                    </p>
+                                    <p className="text-[12px]">
+                                        <span className="font-bold">Peggy</span>, 30 January
+                                    </p>
                                 </div>
                             </li>
 
-                            {/* 3rd */}
-                            <li className="leading-5">
-                                <div className="flex gap-2">
-                                    <span className="text-green-600 text-[30px] leading-none">“</span>
-
-                                    <div>
-                                        <p className="font-bold line-clamp-1">
-                                            Kwaliteitsvlees en kwaliteitsservice.
-                                        </p>
-
-                                        <p className="text-[12px] mt-1" >
-                                            <span className='font-bold'> Erwin, </span> 30 January
-                                        </p>
-                                    </div>
+                            <li className="flex gap-2">
+                                <span className="text-green-600 text-[30px]">“</span>
+                                <div>
+                                    <p className="font-bold text-[13px]">
+                                        Kwaliteitsvlees en kwaliteitsservice
+                                    </p>
+                                    <p className="text-[12px]">
+                                        <span className="font-bold">Erwin</span>, 30 January
+                                    </p>
                                 </div>
                             </li>
 
                         </ul>
 
-                    </div>
-                    <div className='text-[13px] flex justify-between' >
-                        TrustScore 4.8 / 5｜4,803 reviews
-
-                        <span className="inline-flex items-center gap-1">
-                            <IoStarSharp className="text-green-500 text-xl" />
-                            <span>Trustpilot</span>
-                        </span>
-                    </div>
-                </article>
-
-                {/* 3rd article   */}
-                <article className='flex flex-col gap-5 w-[386px] p-[10px] text-white border ' >
-                    <p className='text-[28px] text-white font-bold '>A QUESTION? </p>
-
-                    <div className='text-[30px] text-white '>
-                        Contact our customer <br />
-                        service
-                    </div>
-
-                    <p className='text-[13px] text-white hover:font-bold '> 📩 info@vlees-in-the-box.be</p>
-
-                    <div>
-                        <p className='text-[22px] text-white font-bold '> Download Our App</p>
-
-                        <div className='flex gap-2'>
-                            <img className='rounded-sm max-w-[193px] max-h-[54px] ' src="https://www.vlees-in-the-box.be/image/catalog/qrcode/google-store-transparent.png" alt="" />
-
-                            <img className='rounded-sm max-w-[193px] max-h-[54px] ' src="https://www.vlees-in-the-box.be/image/catalog/qrcode/app-store-transparent.png" alt="" />
+                        <div className="text-[13px] flex items-center justify-between">
+                            TrustScore 4.8 / 5
+                            <span className="flex items-center gap-1">
+                                <IoStarSharp className="text-green-500 text-lg" />
+                                Trustpilot
+                            </span>
                         </div>
-                    </div>
 
-                </article>
+                    </article>
+
+                    {/* 3rd article */}
+                    <article className="flex flex-col gap-5">
+
+                        <h2 className="text-[24px] sm:text-[26px] lg:text-[28px] font-bold">A QUESTION?</h2>
+
+                        <p className="text-[26px] leading-snug">
+                            Contact our customer <br /> service
+                        </p>
+
+                        <p className="text-[13px] hover:font-bold">
+                            📩 info@vlees-in-the-box.be
+                        </p>
+
+                        <div>
+
+                            <p className="text-[22px] font-bold mb-2">
+                                Download Our App
+                            </p>
+
+                            <div className="flex flex-wrap gap-3">
+
+                                <img
+                                    className="max-w-[180px] h-auto"
+                                    src="https://www.vlees-in-the-box.be/image/catalog/qrcode/google-store-transparent.png"
+                                    alt="google play"
+                                />
+
+                                <img
+                                    className="max-w-[180px] h-auto"
+                                    src="https://www.vlees-in-the-box.be/image/catalog/qrcode/app-store-transparent.png"
+                                    alt="app store"
+                                />
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
             </section>
 
+
             {/* 4th footer  */}
-            <section className=' font-[Merriweather]  text-white bg-[#86133A] flex items-start justify-around min-h-[423px] p-[50px] border-t border-white ' >
-                <article className='flex flex-col gap-5 w-[386px] p-[10px] '>
-                    <h1 className='text-[28px] font-bold'>About Us</h1>
+            <section className=' font-[Merriweather]  text-white bg-[#86133A] py-[50px] px-[40px] border-t border-white ' >
 
-                    <ul className='flex flex-col gap-4 text-[13px]  '>
-                        <li className='inline-flex max-w-[200px]'>
-                            <MdArrowRight size={25} className='mr-3' />
-                            Our mission and vision</li>
-                        <li className='inline-flex max-w-[200px]'>
-                            <MdArrowRight size={25} className='mr-3' />
-                            contact us
-                        </li>
+                <div className='max-w-[1200px] mx-auto grid gap-10
+                grid-cols-1 
+                sm:grid-cols-2
+                lg:grid-cols-3' >
 
-                        <li className='inline-flex max-w-[200px]'>
-                            <CiFacebook size={20} className='mr-3' />
-                            Facebook
-                        </li>
-                        <li className='inline-flex max-w-[200px]'>
-                            <FaInstagramSquare size={20} className='mr-3' />
-                            Instagram
-                        </li>
-                        <li className='inline-flex max-w-[200px]'>
-                            <FaTwitter size={20} className='mr-3' />
-                            Twitter
-                        </li>
-                    </ul>
-                </article>
+                    {/* 1st article */}
+                    <article className='flex flex-col gap-4 '>
+                        <h1 className='text-[24px] sm:text-[26px] lg:text-[28px] font-bold'>About Us</h1>
 
-                <article className='flex flex-col gap-5 w-[386px] p-[10px] '>
-                    <h1 className='text-[28px] font-bold'>Customer Service</h1>
+                        <ul className='flex flex-col gap-4 text-[13px]  '>
+                            <li className="flex items-start gap-3 max-w-[200px]">
+                                <MdArrowRight size={20} className="mt-1 shrink-0" />
+                                Our mission and vision</li>
+                            <li className="flex items-start gap-3 max-w-[200px]">
+                                <MdArrowRight size={20} className="mt-1 shrink-0" />
+                                contact us
+                            </li>
 
-                    {/* <ul className='flex flex-col gap-4 text-[13px] border'>
-                        <li className='inline-flex max-w-[200px]'>
-                            <MdArrowRight size={35} className='mr-2' />
-                            Why order meat from Vlees-in-The-Box.be?</li> */}
+                            <li className="flex items-start gap-3 max-w-[200px]">
+                                <CiFacebook size={20} className="mt-1 shrink-0" />
+                                Facebook
+                            </li>
+                            <li className="flex items-start gap-3 max-w-[200px]">
+                                <FaInstagramSquare size={20} className="mt-1 shrink-0" />
+                                Instagram
+                            </li>
+                            <li className="flex items-start gap-3 max-w-[200px]">
+                                <FaTwitter size={20} className="mt-1 shrink-0" />
+                                Twitter
+                            </li>
+                        </ul>
+                    </article>
 
-                    <ul className="flex flex-col gap-4 text-[14px]">
+                    {/* 2nd article */}
+                    <article className='flex flex-col gap-5 '>
+                        <h1 className=' text-[24px] sm:text-[26px] lg:text-[28px] font-bold'>Customer Service</h1>
 
-                        <li className="flex items-start gap-3">
-                            <MdArrowRight className="mt-1 shrink-0" size={20} />
-                            <span className="max-w-[200px] text-[13px]">
-                                Why order meat from Vlees-in-The-Box.be?
-                            </span>
-                        </li>
+                        <ul className="flex flex-col gap-4 text-[14px]">
 
-                        <li className="flex items-start gap-3">
-                            <MdArrowRight className="mt-1 shrink-0" size={20} />
-                            <span className="max-w-[200px] text-[13px]">
-                                What do I do with all those cooling elements?
-                            </span>
-                        </li>
+                            <li className="flex items-start gap-3">
+                                <MdArrowRight className="mt-1 shrink-0" size={20} />
+                                <span className="max-w-[200px] text-[13px]">
+                                    Why order meat from Vlees-in-The-Box.be?
+                                </span>
+                            </li>
 
-                        <li className="flex items-start gap-3">
-                            <MdArrowRight className="mt-1 shrink-0" size={20} />
-                            <span className="max-w-[200px] text-[13px]">
-                                What after opening my package?
-                            </span>
-                        </li>
+                            <li className="flex items-start gap-3">
+                                <MdArrowRight className="mt-1 shrink-0" size={20} />
+                                <span className="max-w-[200px] text-[13px]">
+                                    What do I do with all those cooling elements?
+                                </span>
+                            </li>
 
-                        <li className="flex items-start gap-3">
-                            <MdArrowRight className="mt-1 shrink-0" size={20} />
-                            <span className="max-w-[200px] text-[13px]">
-                                How can I track the status of my order?
-                            </span>
-                        </li>
+                            <li className="flex items-start gap-3">
+                                <MdArrowRight className="mt-1 shrink-0" size={20} />
+                                <span className="max-w-[200px] text-[13px]">
+                                    What after opening my package?
+                                </span>
+                            </li>
 
-                        <li className="flex items-start gap-3">
-                            <MdArrowRight className="mt-1 shrink-0" size={20} />
-                            <span className="max-w-[200px] text-[13px]">
-                                I am already a customer. Do I get a discount if I convince a friend to also order from Meat-in-the-box?
-                            </span>
-                        </li>
+                            <li className="flex items-start gap-3">
+                                <MdArrowRight className="mt-1 shrink-0" size={20} />
+                                <span className="max-w-[200px] text-[13px]">
+                                    How can I track the status of my order?
+                                </span>
+                            </li>
 
-                    </ul>
-                </article>
+                            <li className="flex items-start gap-3">
+                                <MdArrowRight className="mt-1 shrink-0" size={20} />
+                                <span className="max-w-[200px] text-[13px]">
+                                    I am already a customer. Do I get a discount if I convince a friend to also order from Meat-in-the-box?
+                                </span>
+                            </li>
 
-                <article className='flex flex-col gap-5 w-[386px] p-[10px] '>
-                    <h1 className='text-[28px] font-bold'>PAYMENT OPTIONS</h1>
+                        </ul>
+                    </article>
 
-                    <div className='grid grid-cols-2 gap-3  w-[200px] '>
-                        <img className='w-[65px] h-auto '
-                            src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/Old_Visa_Logo.svg_-130x84fill.png.webp" alt="visa" />
+                    <article className='flex flex-col gap-5  '>
 
-                        <img className='w-[65px] h-auto '
-                            src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/Maestro_logo.svg_-130x77fill.png.webp" alt="maestro" />
+                        <h1 className='text-[24px] sm:text-[26px] lg:text-[28px] font-bold'>PAYMENT OPTIONS</h1>
 
-                        <img className='w-[65px] h-auto '
-                            src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/mastercard-130x90fill.png.webp" alt="mastercard" />
+                        <div className='grid grid-cols-2 gap-3 max-w-[200px] '>
+                            <img className='max-w-[65px] h-auto '
+                                src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/Old_Visa_Logo.svg_-130x84fill.png.webp" alt="visa" />
 
-                        <img className='w-[65px] h-auto '
-                            src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/bancontact-logo_0-130x80fill.png.webp" alt="ban contact" />
+                            <img className='max-w-[65px] h-auto '
+                                src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/Maestro_logo.svg_-130x77fill.png.webp" alt="maestro" />
 
-                        <img className='w-[65px] h-auto '
-                            src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/logo%20ideal_0-130x130fill.png.webp" alt="Ideal" />
-                    </div>
+                            <img className='max-w-[65px] h-auto '
+                                src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/mastercard-130x90fill.png.webp" alt="mastercard" />
 
-                </article>
+                            <img className='max-w-[65px] h-auto '
+                                src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/bancontact-logo_0-130x80fill.png.webp" alt="ban contact" />
+
+                            <img className='max-w-[65px] h-auto '
+                                src="https://www.vlees-in-the-box.be/image/cache/catalog/payments/logo%20ideal_0-130x130fill.png.webp" alt="Ideal" />
+                        </div>
+
+                    </article>
+                </div>
             </section>
 
             {/* 5th footer section  */}

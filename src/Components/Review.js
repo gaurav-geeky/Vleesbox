@@ -52,9 +52,14 @@ full screen 1440 - 4 cards ,
   at 560 px no card 
    min-[560px]:flex 
 
+ */ 
 
+/*
    now next footer sections footer has 3 parts flexed i examine and see  
 ___ at lg screen 1024 px text size same as above just text wraps , width of card in which each item consist changes only . 
 and under 1024 px 3rd card where play store and apple logo is kept comes down i think flex get wrap !  and 
-under 470 px 3rd part also wrap and comes down and all 3 part get flex col i think so how to do 
+under 470 px 3rd part also wrap and comes down and all 3 part get flex col i think so how to do  
+
+
 */
+
