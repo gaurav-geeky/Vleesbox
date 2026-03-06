@@ -45,4 +45,12 @@
                         )}
 
                     </div>
-                </div>
+                </div> 
+
+<a  href="https://www.google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+                        Technogiq
+                    </a>
+                    {/*  the external site could change your original tab to a phishing page. With noopener window.opener becomes null, so the new tab cannot control your page. */}

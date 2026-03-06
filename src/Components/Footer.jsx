@@ -419,7 +419,15 @@ const Footer = () => {
                 </div>
 
                 <div className="text-[#86133A] hover:text-[#EAA6BB] cursor-pointer">
-                    Technogiq
+                    <a
+                        href="https://www.technogiq.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Technogiq
+                    </a>
+                    
+
                 </div>
 
             </section>
