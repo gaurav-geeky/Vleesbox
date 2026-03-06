@@ -402,17 +402,26 @@ const Footer = () => {
                 </div>
             </section>
 
-            {/* 5th footer section  */}
-            <section className='bg-white h-15 flex justify-between items-center text-[12px]  font-medium font-[Merriweather] uppercase mx-20 '>
-                <div className='text-[#86133A]'>
-                    © Vlees-in-the-Box 2026 -
-                    <span className='text-[#86133A] hover:text-[#EAA6BB]'> Disclaimer</span> -
+            {/* <section className='bg-white h-15 flex justify-between items-center text-[12px]  font-medium font-[Merriweather] uppercase mx-20 '> */}
 
-                    <span className='text-[#86133A] hover:text-[#EAA6BB]'> GENERAL CONDITIONS</span>
+            {/* 5th footer section */}
+            <section className="
+                bg-white flex flex-col sm:flex-row
+                sm:justify-between items-center text-[12px] 
+                font-medium font-[Merriweather] uppercase
+                px-6 sm:px-20 py-4 gap-2
+                ">
+
+                <div className="text-[#86133A] text-center sm:text-left">
+                    © Vlees-in-the-Box 2026 -
+                    <span className="hover:text-[#EAA6BB] cursor-pointer"> Disclaimer</span> -
+                    <span className="hover:text-[#EAA6BB] cursor-pointer"> GENERAL CONDITIONS</span>
                 </div>
-                <div className='text-[#86133A] hover:text-[#EAA6BB]'>
+
+                <div className="text-[#86133A] hover:text-[#EAA6BB] cursor-pointer">
                     Technogiq
                 </div>
+
             </section>
 
         </>
